@@ -25,6 +25,8 @@ reg                 rd_addr_sel;
 
 reg                 counter, counter_r;
 
+initial rd_addr = 0;
+
     always @(*) begin
 
         wr_en = wen_cgr | wen_sqg;
@@ -55,8 +57,8 @@ reg                 counter, counter_r;
             default:  wr_addr = counter;
         endcase
         case (rd_addr_sel) 
-            0:  wr_data = BC_rd_addr;
-            default:  wr_data = XY;
+            0:  rd_addr = BC_rd_addr;
+            default:  rd_addr = XY;
         endcase
     end
 

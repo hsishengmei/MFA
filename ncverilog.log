@@ -1,14 +1,14 @@
 ncverilog: 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
-TOOL:	ncverilog	14.10-s005: Started on Dec 17, 2017 at 15:30:43 CST
+TOOL:	ncverilog	14.10-s005: Started on Dec 18, 2017 at 00:00:21 CST
 ncverilog
 	+access+r
 	test_top_module.v
 	top_module.v
-Recompiling... reason: file './ram.v' is newer than expected.
-	expected: Sun Dec 17 11:36:07 2017
-	actual:   Sun Dec 17 15:30:42 2017
-file: top_module.v
-	module worklib.ram:v
+Recompiling... reason: file './test_top_module.v' is newer than expected.
+	expected: Sun Dec 17 15:27:05 2017
+	actual:   Mon Dec 18 00:00:20 2017
+file: test_top_module.v
+	module worklib.test_top_module:v
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
@@ -17,12 +17,8 @@ file: top_module.v
 ncelab: *W,CUVMPW (./top_module.v,60|18): port sizes differ in port connection (16/6).
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.ram:v <0x377ec285>
-			streams:   3, words:   912
 		worklib.test_top_module:v <0x1ca02928>
-			streams:   9, words:  6102
-		worklib.top_module:v <0x50af82cf>
-			streams:   3, words:   507
+			streams:   9, words:  5551
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -33,14 +29,14 @@ ncelab: *W,CUVMPW (./top_module.v,60|18): port sizes differ in port connection (
 		Expanded wires:      16       1
 		Vectored wires:       9       -
 		Always blocks:       10      10
-		Initial blocks:       4       4
+		Initial blocks:       7       7
 		Pseudo assignments:   2       2
 	Writing initial simulation snapshot: worklib.test_top_module:v
 Loading snapshot worklib.test_top_module:v .................... Done
 *Verdi* Loading libsscore_ius141.so
 ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
 ncsim> run
-Simulation complete via $finish(1) at time 40350 NS + 0
+Simulation complete via $finish(1) at time 40030 NS + 0
 ./test_top_module.v:54         $finish;
 ncsim> exit
-TOOL:	ncverilog	14.10-s005: Exiting on Dec 17, 2017 at 15:30:49 CST  (total: 00:00:06)
+TOOL:	ncverilog	14.10-s005: Exiting on Dec 18, 2017 at 00:00:26 CST  (total: 00:00:05)

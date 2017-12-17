@@ -112,6 +112,9 @@ Branch = 1
 IfShowModule = {TRUE, FALSE}
 [DisabledMessages]
 version = Verdi_M-2017.03
+50528646 = disabled
+50528678 = disabled
+50528526 = disabled
 [Editor]
 editorName = TurboEditor
 [Emacs]
@@ -197,7 +200,7 @@ StickSet-LineWidth = 1
 StickSet-FillColor = purple6
 StickSet-TextColor = black
 [FSM_Dlg-Print]
-Orientation = Landscape        
+Orientation = Landscape      
 [FileBrowser]
 nWaveOpenFsdbDirHistory = "\"/home/b03015/MFA/test_top_module.vcd\""
 [Form]
@@ -233,7 +236,7 @@ filter_case_sensitive = FALSE
 filter_full_path = FALSE
 load_detail_for_funcov = FALSE
 sort_limit = 100000
-ignoreDBVersionChecking = FALSE           
+ignoreDBVersionChecking = FALSE         
 [HB]
 ViewSchematic = FALSE
 windowLayout = 0 0 804 500 182 214 804 148
@@ -303,10 +306,10 @@ FileName = test.ps
 PaperSize = A4 - 210x297 (mm)
 ColorPrint = FALSE
 [QtDialog]
-QwUserAskDlg = 586,258,324,111
+QwUserAskDlg = 586,258,324,130
+openFileDlg = 475,190,602,483
 QwInfoMsgDlg = 383,267,750,250
-openFileDlg = 233,267,602,483
-qWaveSignalDialog = 171,265,800,479
+qWaveSignalDialog = 208,267,800,479
 [Session Cache]
 1 = string (session file name)
 2 = string (session file name)
@@ -513,8 +516,11 @@ ovaForbidSuccessColor = -c ID_GREEN5
 SigGroupRuleFile = 
 DisplayFileName = FALSE
 waveform_vertical_scroll_bar = TRUE
-getSignalForm = 171 265 800 479 163 381 387 89
-viewPort = 0 23 1536 801 100 65
+scope_to_save_with_macro
+open_file_dir
+open_rc_file_dir
+getSignalForm = 661 267 800 479 163 381 387 89
+viewPort = 8 31 1536 801 172 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -696,7 +702,6 @@ ResolveSymbolicLink = TRUE
 signal_rc_abspath = TRUE
 signal_rc_no_natural_bus_range = FALSE
 save_scope_with_macro = FALSE
-scope_to_save_with_macro
 TipInSignalWin = FALSE
 FilterTextField = FALSE
 DisplaySignalTypeAheadOfSignalName = TRUE ICON
@@ -773,8 +778,6 @@ pcSelectMode = TRUE
 hierarchyDelimiter = /
 RecentFile1 = "\"/home/b03015/MFA/test_top_module.vcd.fsdb\""
 open_file_time_range = FALSE
-open_file_dir
-open_rc_file_dir
 value_window_aligment = Right
 signal_window_alignment = Auto
 ShowDeltaTime = TRUE
@@ -957,9 +960,9 @@ Selection = darkblue
 Standard = black
 Keyword = blue
 Comment = gray25
-Number = black   
-String = black   
-Identifier = darkred   
+Number = black 
+String = black 
+Identifier = darkred 
 Inline = green
 colorIdentifier = green
 Value = darkgreen
@@ -983,7 +986,7 @@ AddImportArgument = TRUE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -tcl
 [turboSchema_Printer_Options]
-Orientation = Landscape        
+Orientation = Landscape      
 [turbo_library]
 bdb_load_scope = 
 [verisity]

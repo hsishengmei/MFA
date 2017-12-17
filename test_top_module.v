@@ -48,8 +48,8 @@ module test_top_module ();
         @(negedge RST); // wait for reset
         BC_mode = 1;
         repeat(2000) @(posedge CLK);
-        BC_mode = 0;
-        repeat(16) @(posedge CLK);
+        // BC_mode = 0;
+        // repeat(16) @(posedge CLK);
 	
         $finish;
     end

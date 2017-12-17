@@ -23,12 +23,12 @@ HOME=/home/b03015
 PATH=/usr/cad/synopsys/verdi/cur/bin:/usr/cad/synopsys/verdi/cur/nLint/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/amd64/syn/bin:/usr/bin/X11:/usr/cad/synopsys/coreConsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/cadence/IC/cur/tools/dfII/bin:/usr/cad/cadence/IC/cur/tools/dracula/bin:/usr/cad/cadence/IC/cur/tools/bin:/usr/cad/cadence/EDI/cur/tools/celtic/bin:/usr/cad/cadence/EDI/cur/tools/plato/bin:/usr/cad/cadence/EDI/cur/tools/dfII/bin:/usr/cad/cadence/EDI/cur/tools/fe/bin:/usr/cad/cadence/EDI/cur/tools/cdsdoc/bin:/usr/cad/cadence/EDI/cur/tools/bin:/usr/cad/cadence/EDI/cur//tools/tlfUtil/bin:/usr/cad/cadence/INCISIV/cur/tools/bin:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/bin:/usr/cad/cadence/INCISIV/cur/tools/dfII/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 MAIL=/var/spool/mail/b03015
 SHELL=/bin/csh
-SSH_CLIENT=118.167.28.226 62928 22
-SSH_CONNECTION=118.167.28.226 62928 192.168.0.175 22
+SSH_CLIENT=118.167.28.226 49675 22
+SSH_CONNECTION=118.167.28.226 49675 192.168.0.175 22
 SSH_TTY=/dev/pts/1
 TERM=xterm
 DISPLAY=localhost:11.0
-XDG_SESSION_ID=39481
+XDG_SESSION_ID=39633
 XDG_RUNTIME_DIR=/run/user/1000033
 HOSTTYPE=x86_64-linux
 VENDOR=unknown
@@ -50,7 +50,7 @@ QTDIR=/usr/lib64/qt-3.3
 QTINC=/usr/lib64/qt-3.3/include
 QTLIB=/usr/lib64/qt-3.3/lib
 LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/::/usr/cad/cadence/IC/cur/tools/lib:/usr/cad/cadence/EDI/cur//tools/tlfUtil/lib:/usr/cad/cadence/INCISIV/cur/tools/lib:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/lib:/usr/openwin/lib:/usr/dt/lib:/usr/lib:/usr/local/lib
-LM_LICENSE_FILE=26585@lsntu:5280@lsntu:5280@lsnctu:5280@lsncu:
+LM_LICENSE_FILE=26585@lsntu:5280@lsntu:5280@lsncku:5280@lsnchu:
 ENCOUNTER=/usr/cad/cadence/EDI/cur/tools/fe
 OA_HOME=/usr/cad/cadence/EDI/cur/oa
 CDS_Netlisting_Mode=Analog
@@ -71,9 +71,9 @@ argv[1]=+access+r
 argv[2]=test_top_module.v
 argv[3]=top_module.v
 72 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.030 user,  51.10M sys,  0.00M vm
+          CPU/Mem usage: 0.030 sys,  0.030 user,  51.11M sys,  0.00M vm
 73 VC callback profile - scalar:0 vector:0
-74 Sun Dec 17 15:30:43 2017
+74 Mon Dec 18 00:00:22 2017
 75 pliAppInit
 76 FSDB_GATE is disabled.
 77 Enable Parallel Dumping.
