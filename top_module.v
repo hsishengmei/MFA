@@ -10,7 +10,6 @@ module top_module #(parameter ADDR_LEN = 6, DATA_LEN = 8, BOX_IDX = 3) (
 	input BC_mode,
 
 	output done
-
 );
 
 reg      [15:0]      counter_r, counter_w;
@@ -26,6 +25,8 @@ wire    	[DATA_LEN-1:0]  ML1XY;
 wire    	[DATA_LEN-1:0]  wr_data;
 wire    	[ADDR_LEN-1:0]  wr_addr;
 wire    	[ADDR_LEN-1:0]  rd_addr;
+
+// wire		[DATA_LEN-1:0]  ram0[2**ADDR_LEN-1:0];
 
 cgr #(.DATA_LEN(2000)) CGR (
 	.CLK(CLK),

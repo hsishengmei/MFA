@@ -11,11 +11,13 @@ module ram #(
     input   wr_en,
     
     output reg  [DATA_LEN-1:0]   Q
-);
-    localparam DATA_WS  = 2**ADDR_LEN;
+);   
+
+    reg  [DATA_LEN-1:0] ram0 [2**ADDR_LEN-1:0];
+    // localparam DATA_WS  = 2**ADDR_LEN;
 
     // `define MATA0        "./data/matrix_A_0.dat"
-    reg [DATA_LEN-1:0]   ram[DATA_WS-1:0];
+    // reg [DATA_LEN-1:0]   ram[DATA_WS-1:0];
     // reg [63:0]     mata_mem   [0:7];
     // initial $readmemb (`MATA0, ram);
     // reg [DATA_BIT_LEN-1:0] ram3[63:0];
@@ -24,10 +26,11 @@ module ram #(
     
     always @(posedge CLK) begin
         if (wr_en) begin
-            ram[wr_addr] <= wr_data;
+            ram0[wr_addr] <= wr_data;
         end
         
-        Q  <= ram[rd_addr];
+        Q  <= ram0[rd_addr];
+        $writememh("result.txt", ram0);
     end
 
 endmodule

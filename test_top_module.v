@@ -7,7 +7,7 @@ module test_top_module ();
 	reg [1:0] symbol;
 	reg BC_mode;
 	wire done;
-	
+		
 	always @(posedge CLK) begin
 		data <= {2'b00, data[3999:2]};
 		symbol <= data[1:0];
@@ -20,7 +20,6 @@ module test_top_module ();
 		.BC_mode(BC_mode),
 
 		.done(done)
-
 	);
 
     initial begin
@@ -51,7 +50,10 @@ module test_top_module ();
         repeat(2000) @(posedge CLK);
         BC_mode = 0;
         repeat(16) @(posedge CLK);
+	
         $finish;
     end
-   
+ 
+
+  
 endmodule
