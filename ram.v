@@ -16,10 +16,10 @@ module ram #(
     reg  [DATA_LEN-1:0] ram0 [2**ADDR_LEN-1:0];
     // localparam DATA_WS  = 2**ADDR_LEN;
 
-    // `define MATA0        "./data/matrix_A_0.dat"
+    `define MATA0        "matrix_A_0.dat"
     // reg [DATA_LEN-1:0]   ram[DATA_WS-1:0];
     // reg [63:0]     mata_mem   [0:7];
-    // initial $readmemb (`MATA0, ram);
+    initial $readmemb (`MATA0, ram0);
     // reg [DATA_BIT_LEN-1:0] ram3[63:0];
     // reg [DATA_BIT_LEN-1:0] ram2[15:0];
     // reg [DATA_BIT_LEN-1:0] ram1[3:0];
