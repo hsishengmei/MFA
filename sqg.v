@@ -7,8 +7,8 @@ module sqg #(parameter BOX_IDX = 3) (
     output reg wen_sqg,
     output reg [7:0] y,
     output reg [2*BOX_IDX-1:0] BC_rd_addr,
-    output reg [2*BOX_IDX-3:0] BC_wr_addr,
-    output reg [3:0] next_box_len
+    output reg [2*BOX_IDX-3:0] BC_wr_addr
+    // output RAM_ID
     );
 
 
@@ -18,16 +18,16 @@ module sqg #(parameter BOX_IDX = 3) (
     reg [BOX_IDX-1:0] count_rd_x_r, count_rd_y_r;
     reg [BOX_IDX-2:0] count_wr_x, count_wr_y;
 
+
     always @(*) begin
-	next_box_len = BOX_IDX - 1;
         y = x + x_r;
         counter_w = counter_r + 1;
         wen_sqg = 0;
         BC_rd_addr = { count_rd_x, count_rd_y };
         BC_wr_addr = { count_wr_x, count_wr_y };
         
-	count_wr_x = count_rd_x[BOX_IDX-1:1];
-	count_wr_y = count_rd_y[BOX_IDX-1:1];
+    	count_wr_x = count_rd_x[BOX_IDX-1:1];
+    	count_wr_y = count_rd_y[BOX_IDX-1:1];
 
         if (RST | BC_mode) begin
             counter_w = 0;

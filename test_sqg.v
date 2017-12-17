@@ -11,11 +11,11 @@ module test_sqg ();
         .CLK(CLK),
         .RST(RST),
         .BC_mode(BC_mode),
-	.x(x),
-	.wen_sqg(wen_sqg),
+    	.x(x),
+    	.wen_sqg(wen_sqg),
         .y(y),
-	.BC_rd_addr(rd_addr),
-	.BC_wr_addr(wr_addr)
+    	.BC_rd_addr(rd_addr),
+    	.BC_wr_addr(wr_addr)
     );
 
     initial begin
