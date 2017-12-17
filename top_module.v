@@ -3,32 +3,31 @@
 `include "ram_ctrl.v"
 `include "ram.v"
 
-module top_module #(parameter ADDR_LEN = 16, DATA_LEN = 8, BOX_IDX = 3) (
+module top_module #(parameter ADDR_LEN = 6, DATA_LEN = 8, BOX_IDX = 3) (
 	input CLK,
 	input RST,
-	input [1:0]  symbol_str[1999:0],
+	input [1:0]  symbol,
 	input BC_mode,
 
 	output done
 
 );
 
-wire 	[1:0] 		symbol;
-reg     [15:0]      counter_r, counter_w;
-reg     [15:0] 		addr;
-reg     wen_cgr;
-wire    clr_ram;
+reg      [15:0]      counter_r, counter_w;
+wire     [15:0]	    cgr_wr_addr;
+wire     wen_cgr;
+reg     clr_ram;
 
-reg    	[ADDR_LEN-1:0]  BC_rd_addr;
-reg    	[ADDR_LEN-1:0]  BC_wr_addr;
-reg    	[ADDR_LEN-1:0]  XY;
-reg    	[DATA_LEN-1:0]  MLXY;
-reg    	[DATA_LEN-1:0]  ML1XY;
-reg    	[ADDR_LEN-1:0]  wr_data;
-reg    	[DATA_LEN-1:0]  wr_addr;
-reg    	[DATA_LEN-1:0]  rd_addr;
+wire    	[ADDR_LEN-1:0]  BC_rd_addr;
+wire    	[ADDR_LEN-1:0]  BC_wr_addr;
+wire    	[ADDR_LEN-1:0]  XY;
+wire    	[DATA_LEN-1:0]  MLXY;
+wire    	[DATA_LEN-1:0]  ML1XY;
+wire    	[DATA_LEN-1:0]  wr_data;
+wire    	[ADDR_LEN-1:0]  wr_addr;
+wire    	[ADDR_LEN-1:0]  rd_addr;
 
-cgr CGR #(.DATA_LEN(2000)) (
+cgr #(.DATA_LEN(2000)) CGR (
 	.CLK(CLK),
 	.RST(RST),
 	.symbol(symbol),
@@ -37,7 +36,7 @@ cgr CGR #(.DATA_LEN(2000)) (
 	.wen_cgr(wen_cgr)
 );
 
-sqg SQG #(.BOX_IDX(BOX_IDX)) (
+sqg #(.BOX_IDX(BOX_IDX)) SQG (
 	.CLK(CLK),
 	.RST(RST),
 	.BC_mode(BC_mode),
@@ -48,7 +47,7 @@ sqg SQG #(.BOX_IDX(BOX_IDX)) (
 	.BC_wr_addr(BC_wr_addr)
 );
 
-ram_ctrl RAM_CTRL #(.ADDR_LEN(ADDR_LEN), .DATA_LEN(DATA_LEN)) (
+ram_ctrl #(.ADDR_LEN(ADDR_LEN), .DATA_LEN(DATA_LEN)) RAM_CTRL (
     .CLK(CLK),
     .RST(RST),
     .clr_ram(clr_ram),
@@ -66,10 +65,11 @@ ram_ctrl RAM_CTRL #(.ADDR_LEN(ADDR_LEN), .DATA_LEN(DATA_LEN)) (
     .wr_en(wr_en)
 );
 
-ram RAM #(.ADDR_LEN(ADDR_LEN), .DATA_LEN(DATA_LEN)) (
+ram #(.ADDR_LEN(ADDR_LEN), .DATA_LEN(DATA_LEN)) RAM (
 	.CLK(CLK),
 	.wr_data(wr_data),
 	.wr_addr(wr_addr),
+	.rd_addr(rd_addr),
 	.wr_en(wr_en),
 	.Q(MLXY)
 );
@@ -84,6 +84,7 @@ always @(posedge CLK or posedge RST) begin
 	end
 	else begin
 		counter_r <= counter_w + 1;
-		{symbol_str[3999:0], symbol[1:0]} <= {2'b00, symbol_str[3999:0]};
 	end
 end
+
+endmodule

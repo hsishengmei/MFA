@@ -1,14 +1,22 @@
 module test_top_module ();
 
+	integer fp_r, cnt;
+
 	reg CLK, RST;
 	reg [3999:0] data;
+	reg [1:0] symbol;
 	reg BC_mode;
-	reg done;
+	wire done;
+	
+	always @(posedge CLK) begin
+		data <= {2'b00, data[3999:2]};
+		symbol <= data[1:0];
+	end
 
-	top_module MAIN #(.ADDR_LEN(16), .DATA_LEN(8), .BOX_IDX(3)) (
+	top_module #(.ADDR_LEN(6), .DATA_LEN(8), .BOX_IDX(3)) MAIN (
 		.CLK(CLK),
 		.RST(RST),
-		.symbol_str(data),
+		.symbol(symbol),
 		.BC_mode(BC_mode),
 
 		.done(done)

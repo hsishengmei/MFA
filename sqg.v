@@ -7,7 +7,7 @@ module sqg #(parameter BOX_IDX = 3) (
     output reg wen_sqg,
     output reg [7:0] y,
     output reg [2*BOX_IDX-1:0] BC_rd_addr,
-    output reg [2*BOX_IDX-3:0] BC_wr_addr
+    output reg [2*BOX_IDX-1:0] BC_wr_addr
     // output RAM_ID
     );
 
@@ -16,7 +16,7 @@ module sqg #(parameter BOX_IDX = 3) (
     reg [2*BOX_IDX-1:0] counter_r, counter_w;
     reg [BOX_IDX-1:0] count_rd_x, count_rd_y;
     reg [BOX_IDX-1:0] count_rd_x_r, count_rd_y_r;
-    reg [BOX_IDX-2:0] count_wr_x, count_wr_y;
+    reg [BOX_IDX-1:0] count_wr_x, count_wr_y;
 
 
     always @(*) begin

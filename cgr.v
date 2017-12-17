@@ -4,7 +4,7 @@ module cgr #(parameter DATA_LEN = 8) (
     input [1:0] symbol,
     input BC_mode,
     output reg [15:0] addr,
-    output wen_cgr
+    output reg wen_cgr
 );
 
 integer             i;
@@ -46,7 +46,7 @@ end
 always @(posedge CLK or posedge RST) begin
     if (RST) begin
         counter_r <= 0;
-        for (i=0; i<8; i++) begin
+        for (i=0; i<8; i=i+1) begin
             addr_x[i] <= 0;
             addr_y[i] <= 0;            
         end

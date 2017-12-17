@@ -1,0 +1,55 @@
+ncverilog: 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
+TOOL:	ncverilog	14.10-s005: Started on Dec 17, 2017 at 12:21:34 CST
+ncverilog
+	+access+r
+	test_top_module.v
+	top_module.v
+Recompiling... reason: file './top_module.v' is newer than expected.
+	expected: Sun Dec 17 12:20:23 2017
+	actual:   Sun Dec 17 12:21:08 2017
+file: test_top_module.v
+	module worklib.test_top_module:v
+		errors: 0, warnings: 0
+file: top_module.v
+	module worklib.top_module:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+    .XY(cgr_wr_addr), 
+                  |
+ncelab: *W,CUVMPW (./top_module.v,59|18): port sizes differ in port connection (16/6).
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.cgr:v <0x79f08e02>
+			streams:   4, words:  3966
+		worklib.ram:v <0x1f1e974e>
+			streams:   3, words:   919
+		worklib.ram_ctrl:v <0x304efe14>
+			streams:   3, words:  1651
+		worklib.sqg:v <0x2966e93e>
+			streams:   4, words:  3160
+		worklib.test_top_module:v <0x1ca02928>
+			streams:   9, words:  6102
+		worklib.top_module:v <0x16211173>
+			streams:   3, words:   507
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:              6       6
+		Registers:           45      45
+		Scalar wires:         9       -
+		Expanded wires:      16       1
+		Vectored wires:       9       -
+		Always blocks:       10      10
+		Initial blocks:       4       4
+		Pseudo assignments:   2       2
+	Writing initial simulation snapshot: worklib.test_top_module:v
+Loading snapshot worklib.test_top_module:v .................... Done
+*Verdi* Loading libsscore_ius141.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+Simulation complete via $finish(1) at time 40350 NS + 0
+./test_top_module.v:54         $finish;
+ncsim> exit
+TOOL:	ncverilog	14.10-s005: Exiting on Dec 17, 2017 at 12:21:35 CST  (total: 00:00:01)
