@@ -200,7 +200,7 @@ StickSet-LineWidth = 1
 StickSet-FillColor = purple6
 StickSet-TextColor = black
 [FSM_Dlg-Print]
-Orientation = Landscape      
+Orientation = Landscape     
 [FileBrowser]
 nWaveOpenFsdbDirHistory = "\"/home/b03015/MFA/test_top_module.vcd\""
 [Form]
@@ -236,7 +236,7 @@ filter_case_sensitive = FALSE
 filter_full_path = FALSE
 load_detail_for_funcov = FALSE
 sort_limit = 100000
-ignoreDBVersionChecking = FALSE         
+ignoreDBVersionChecking = FALSE        
 [HB]
 ViewSchematic = FALSE
 windowLayout = 0 0 804 500 182 214 804 148
@@ -960,9 +960,9 @@ Selection = darkblue
 Standard = black
 Keyword = blue
 Comment = gray25
-Number = black 
-String = black 
-Identifier = darkred 
+Number = black
+String = black
+Identifier = darkred
 Inline = green
 colorIdentifier = green
 Value = darkgreen
@@ -986,7 +986,7 @@ AddImportArgument = TRUE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -tcl
 [turboSchema_Printer_Options]
-Orientation = Landscape      
+Orientation = Landscape     
 [turbo_library]
 bdb_load_scope = 
 [verisity]

@@ -8,9 +8,11 @@ module test_top_module ();
 	reg BC_mode;
 	wire done;
 		
-	always @(posedge CLK) begin
-		data <= {2'b00, data[3999:2]};
-		symbol <= data[1:0];
+	always @(negedge CLK or negedge RST) begin
+	    	if (~RST) begin
+			data <= {2'b00, data[3999:2]};
+			symbol <= data[1:0];
+		end
 	end
 
 	top_module #(.ADDR_LEN(6), .DATA_LEN(8), .BOX_IDX(3)) MAIN (
@@ -47,7 +49,7 @@ module test_top_module ();
         BC_mode = 0; // initial value
         @(negedge RST); // wait for reset
         BC_mode = 1;
-        repeat(2000) @(posedge CLK);
+        repeat(50) @(posedge CLK);
         // BC_mode = 0;
         // repeat(16) @(posedge CLK);
 	

@@ -3,14 +3,14 @@ module cgr #(parameter DATA_LEN = 8) (
     input RST,
     input [1:0] symbol,
     input BC_mode,
-    output reg [15:0] addr,
+    output reg [5:0] addr,
     output reg wen_cgr
 );
 
 integer             i;
 reg     [15:0]      counter_r, counter_w;
-reg     [7:0]       addr_x;
-reg     [7:0]       addr_y;
+reg     [2:0]       addr_x;
+reg     [2:0]       addr_y;
 reg                 a, b;
 
 always @(*) begin
@@ -46,10 +46,12 @@ end
 always @(posedge CLK or posedge RST) begin
     if (RST) begin
         counter_r <= 0;
-        for (i=0; i<8; i=i+1) begin
+        for (i=0; i<2; i=i+1) begin
             addr_x[i] <= 0;
             addr_y[i] <= 0;            
         end
+	addr_x[2] <= 1;
+	addr_y[2] <= 1;
     end
     else begin
         counter_r <= counter_w;
@@ -63,8 +65,8 @@ always @(posedge CLK or posedge RST) begin
         // addr_x[1] <= addr_x[2];
         // addr_x[0] <= addr_x[1];
 
-        addr_x[7:0] = {a, addr_x[7:1]};
-        addr_y[7:0] = {b, addr_y[7:1]};
+        addr_x[2:0] = {a, addr_x[2:1]};
+        addr_y[2:0] = {b, addr_y[2:1]};
 
         // addr_y[7] <= b;
         // addr_y[6] <= addr_y[7];

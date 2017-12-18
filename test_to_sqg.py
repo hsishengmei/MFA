@@ -4,12 +4,12 @@ from collections import deque
 
 def CGR_BC(B, n, N):
     # B = ['T', 'A', 'G', ...]
-    X = [2 ** (n-1)]
-    Y = [2 ** (n-1)]
-    for i in range(N):
-        X.append(0)
-        Y.append(0)
-    # print(X)
+    X = 2 ** (n-1)
+    Y = 2 ** (n-1)
+    #for i in range(N):
+    #    X.append(0)
+    #    Y.append(0)
+    print(X)
 
     a = 0
     b = 0
@@ -34,9 +34,10 @@ def CGR_BC(B, n, N):
             a = 1
             b = 0
 
-        X[i+1] = (a << (n-1)) | (X[i] >> 1)
-        Y[i+1] = (b << (n-1)) | (Y[i] >> 1)
-        M[X[i+1]][Y[i+1]] += 1 
+        X = (a << (n-1)) | (X >> 1)
+        Y = (b << (n-1)) | (Y >> 1)
+        M[X][Y] += 1 
+        print(str(X)+" "+str(Y))
     return M
 
 def SQG_BC(M_L, L):
@@ -127,8 +128,11 @@ if __name__ == '__main__':
     with open('seq.txt', 'r') as f:
         bitstr = f.readline()
 
+    bitstr = bitstr[-100:]
+    N = 50
+
     for j in range(N):   
-        rng = bitstr[2*j:2*j+2]
+        rng = bitstr[98-2*j:100-2*j]
         if rng == '00':
             S.append('A')
         elif rng == '01':
@@ -141,7 +145,7 @@ if __name__ == '__main__':
 
     print('method 1: CGR_BC + SQG-BC')
     for n in nlist:
-        print('n =', n, 'number of boxes:', 4 ** n, end=' ')
+    #    print('n =', n, 'number of boxes:', 4 ** n, end=' ')
         a = time.time()  
         M1 = [0 for i in range(n+1)]
         M1[n] = CGR_BC(S, n, N)
@@ -167,7 +171,7 @@ if __name__ == '__main__':
     print('result:')
 
     res = []
-    with open('result2.txt') as f:
+    with open('result.txt') as f:
         for i in range(64):
             line = f.readline()
             num = int(line, 16)
