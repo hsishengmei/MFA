@@ -1,37 +1,4 @@
 Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas -nWave
 uname(Linux localhost.localdomain 3.10.0-514.21.1.el7.x86_64 #1 SMP Thu May 25 17:04:51 UTC 2017 x86_64)
-Disabled Info Message: The file you selected is a VCD file.
- It will be translated to Fast Signal Database(FSDB) file.
-The new FSDB file name: /home/b03015/MFA/test_top_module.vcd.fsdb
-Converter is running ...
+au time 1078.864051 0.025767 0.022641 delta 101216256 101216256 total 479817728 479817728
 
-Disabled AskUser3 Message (Response 0): /home/b03015/MFA/test_top_module.vcd.fsdb exists, overwrite it ?
-Disabled Info Message: Fast file /home/b03015/MFA/test_top_module.vcd.fsdb auto loading!
-Disabled Info Message: The file you selected is a VCD file.
- It will be translated to Fast Signal Database(FSDB) file.
-The new FSDB file name: /home/b03015/MFA/test_top_module.vcd.fsdb
-Converter is running ...
-
-Disabled AskUser3 Message (Response 0): /home/b03015/MFA/test_top_module.vcd.fsdb exists, overwrite it ?
-Disabled Info Message: Fast file /home/b03015/MFA/test_top_module.vcd.fsdb auto loading!
-Disabled Info Message: The file you selected is a VCD file.
- It will be translated to Fast Signal Database(FSDB) file.
-The new FSDB file name: /home/b03015/MFA/test_top_module.vcd.fsdb
-Converter is running ...
-
-Disabled AskUser3 Message (Response 0): /home/b03015/MFA/test_top_module.vcd.fsdb exists, overwrite it ?
-Disabled Info Message: Fast file /home/b03015/MFA/test_top_module.vcd.fsdb auto loading!
-Disabled Info Message: The file you selected is a VCD file.
- It will be translated to Fast Signal Database(FSDB) file.
-The new FSDB file name: /home/b03015/MFA/test_top_module.vcd.fsdb
-Converter is running ...
-
-Disabled AskUser3 Message (Response 0): /home/b03015/MFA/test_top_module.vcd.fsdb exists, overwrite it ?
-Disabled Info Message: Fast file /home/b03015/MFA/test_top_module.vcd.fsdb auto loading!
-Disabled Info Message: The file you selected is a VCD file.
- It will be translated to Fast Signal Database(FSDB) file.
-The new FSDB file name: /home/b03015/MFA/test_top_module.vcd.fsdb
-Converter is running ...
-
-Disabled AskUser3 Message (Response 0): /home/b03015/MFA/test_top_module.vcd.fsdb exists, overwrite it ?
-Disabled Info Message: Fast file /home/b03015/MFA/test_top_module.vcd.fsdb auto loading!

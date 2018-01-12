@@ -25,8 +25,8 @@ module test_top_module ();
 	);
 
     initial begin
-	    $fsdbDumpfile("test_top_module.fsdb"); 
-    	$fsdbDumpvars;
+	$fsdbDumpfile("test_top_module.fsdb"); 
+    	$fsdbDumpvars(0, test_top_module, "+mda");
     	//(6, tb);
         //$dumpfile("test_top_module.vcd");
         //$dumpvars;
