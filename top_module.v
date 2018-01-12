@@ -12,7 +12,6 @@ module top_module #(parameter ADDR_LEN = 6, DATA_LEN = 8, BOX_IDX = 3) (
 	output done
 );
 
-reg      [15:0]      counter_r, counter_w;
 wire     [15:0]	    cgr_wr_addr;
 wire     wen_cgr;
 reg     clr_ram;
@@ -28,7 +27,7 @@ wire    	[ADDR_LEN-1:0]  rd_addr;
 
 // wire		[DATA_LEN-1:0]  ram0[2**ADDR_LEN-1:0];
 
-cgr #(.DATA_LEN(2000)) CGR (
+cgr CGR (
 	.CLK(CLK),
 	.RST(RST),
 	.symbol(symbol),
@@ -74,18 +73,5 @@ ram #(.ADDR_LEN(ADDR_LEN), .DATA_LEN(DATA_LEN)) RAM (
 	.wr_en(wr_en),
 	.Q(MLXY)
 );
-
-always @(*) begin
-	counter_w = counter_r;
-end
-
-always @(posedge CLK or posedge RST) begin
-	if (RST) begin
-		counter_r <= 0;
-	end
-	else begin
-		counter_r <= counter_w + 1;
-	end
-end
 
 endmodule
