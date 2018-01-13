@@ -1,15 +1,13 @@
 ncverilog: 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
-TOOL:	ncverilog	14.10-s005: Started on Jan 13, 2018 at 17:22:08 CST
+TOOL:	ncverilog	14.10-s005: Started on Jan 13, 2018 at 23:49:40 CST
 ncverilog
 	+access+r
 	test_top_module.v
 	top_module.v
 Recompiling... reason: file './ram.v' is newer than expected.
-	expected: Sat Jan 13 17:12:19 2018
-	actual:   Sat Jan 13 17:21:18 2018
+	expected: Sat Jan 13 17:57:04 2018
+	actual:   Sat Jan 13 23:49:39 2018
 file: top_module.v
-	module worklib.sqg:v
-		errors: 0, warnings: 0
 	module worklib.ram:v
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
@@ -20,10 +18,8 @@ file: top_module.v
 ncelab: *W,MEMODR (./ram.v,22|34): $readmem default memory order incompatible with IEEE1364.
  Done
 	Generating native compiled code:
-		worklib.ram:v <0x21928be7>
-			streams:   5, words:  1616
-		worklib.sqg:v <0x6ed9f16d>
-			streams:   4, words:  4641
+		worklib.ram:v <0x19d9c9c4>
+			streams:   5, words:  1760
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -50,4 +46,4 @@ FSDB Dumper for IUS, Release Verdi_M-2017.03, Linux, 02/13/2017
 Simulation complete via $finish(1) at time 81350 NS + 0
 ./test_top_module.v:70         $finish;
 ncsim> exit
-TOOL:	ncverilog	14.10-s005: Exiting on Jan 13, 2018 at 17:22:08 CST  (total: 00:00:00)
+TOOL:	ncverilog	14.10-s005: Exiting on Jan 13, 2018 at 23:49:51 CST  (total: 00:00:11)

@@ -18,7 +18,7 @@ always @(*) begin
     wen_cgr = 0;
     if (BC_mode) begin 
         if (counter_r[0] == 1) begin
-            wen_cgr = 1;
+            if (counter_r != 1) wen_cgr = 1;
         end
     end
 
