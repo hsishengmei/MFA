@@ -3,7 +3,7 @@ module cgr #(parameter DATA_LEN = 3) (
     input RST,
     input [1:0] symbol,
     input BC_mode,
-    output reg [2*DATA_LEN+1:0] addr,
+    output reg [2*DATA_LEN:0] addr,
     output reg wen_cgr
 );
 
@@ -27,7 +27,7 @@ always @(*) begin
     a = symbol[1];
     b = symbol[0];
 
-    addr = { 1'b0, addr_x, 1'b0, addr_y };
+    addr = { addr_x, 1'b0, addr_y };
 
     if (RST) begin
         counter_w = 0;

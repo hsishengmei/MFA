@@ -6,14 +6,14 @@ module ram_ctrl #(parameter ADDR_LEN = 6, DATA_LEN = 8)
     input   BC_mode,
     input   wen_cgr,
     input   wen_sqg,
-    input   [ADDR_LEN+1:0]  BC_rd_addr,
-    input   [ADDR_LEN+1:0]  BC_wr_addr,
-    input   [ADDR_LEN+1:0]  XY,
+    input   [ADDR_LEN:0]  BC_rd_addr,
+    input   [ADDR_LEN:0]  BC_wr_addr,
+    input   [ADDR_LEN:0]  XY,
     input   [DATA_LEN-1:0]  MLXY,
     input   [DATA_LEN-1:0]  ML1XY,
     output reg [DATA_LEN-1:0]  wr_data,
-    output reg [ADDR_LEN+1:0]  wr_addr,
-    output reg [ADDR_LEN+1:0]  rd_addr,
+    output reg [ADDR_LEN:0]  wr_addr,
+    output reg [ADDR_LEN:0]  rd_addr,
     output reg wr_en
 );
 
