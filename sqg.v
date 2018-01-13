@@ -1,4 +1,4 @@
-module sqg #(parameter BOX_IDX = 3) (
+module sqg #(parameter BOX_IDX = 3, parameter MAX_BOX = 3) (
 
     input CLK,
     input RST,
@@ -6,8 +6,8 @@ module sqg #(parameter BOX_IDX = 3) (
     input [7:0] x,
     output reg wen_sqg,
     output reg [7:0] y,
-    output reg [2*BOX_IDX-1:0] BC_rd_addr,
-    output reg [2*BOX_IDX-1:0] BC_wr_addr
+    output reg [2*BOX_IDX+1:0] BC_rd_addr,
+    output reg [2*BOX_IDX+1:0] BC_wr_addr
     // output RAM_ID
     );
 
@@ -18,13 +18,14 @@ module sqg #(parameter BOX_IDX = 3) (
     reg [BOX_IDX-1:0] count_rd_x_r, count_rd_y_r;
     reg [BOX_IDX-1:0] count_wr_x, count_wr_y;
 
+    localparam MEM_START_POINT  = 2 ** MAX_BOX;
 
     always @(*) begin
         y = x + x_r;
         counter_w = counter_r + 1;
         wen_sqg = 0;
-        BC_rd_addr = { count_rd_x, count_rd_y };
-        BC_wr_addr = { count_wr_x, count_wr_y };
+        BC_rd_addr = { 1'b0, count_rd_x, 1'b0, count_rd_y };
+        BC_wr_addr = { 1'b0, count_wr_x, 1'b0, count_wr_y };
         
     	count_wr_x = count_rd_x[BOX_IDX-1:1];
     	count_wr_y = count_rd_y[BOX_IDX-1:1];

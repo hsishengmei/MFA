@@ -37,7 +37,7 @@ def CGR_BC(B, n, N):
         X = (a << (n-1)) | (X >> 1)
         Y = (b << (n-1)) | (Y >> 1)
         M[X][Y] += 1 
-        print(str(X)+" "+str(Y))
+        # print(str(X)+" "+str(Y))
     return M
 
 def SQG_BC(M_L, L):
@@ -128,11 +128,12 @@ if __name__ == '__main__':
     with open('seq.txt', 'r') as f:
         bitstr = f.readline()
 
-    bitstr = bitstr[-100:]
-    N = 50
+    # bitstr = bitstr[-100:]
+    print len(bitstr)
 
     for j in range(N):   
-        rng = bitstr[98-2*j:100-2*j]
+        rng = bitstr[2*j:2*(j+1)]
+        print int(rng)
         if rng == '00':
             S.append('A')
         elif rng == '01':

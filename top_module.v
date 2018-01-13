@@ -16,16 +16,14 @@ wire     [15:0]	    cgr_wr_addr;
 wire     wen_cgr;
 reg     clr_ram;
 
-wire    	[ADDR_LEN-1:0]  BC_rd_addr;
-wire    	[ADDR_LEN-1:0]  BC_wr_addr;
-wire    	[ADDR_LEN-1:0]  XY;
+wire    	[ADDR_LEN+1:0]  BC_rd_addr;
+wire    	[ADDR_LEN+1:0]  BC_wr_addr;
+wire    	[ADDR_LEN+1:0]  XY;
 wire    	[DATA_LEN-1:0]  MLXY;
 wire    	[DATA_LEN-1:0]  ML1XY;
 wire    	[DATA_LEN-1:0]  wr_data;
-wire    	[ADDR_LEN-1:0]  wr_addr;
-wire    	[ADDR_LEN-1:0]  rd_addr;
-
-// wire		[DATA_LEN-1:0]  ram0[2**ADDR_LEN-1:0];
+wire    	[ADDR_LEN+1:0]  wr_addr;
+wire    	[ADDR_LEN+1:0]  rd_addr;
 
 cgr CGR (
 	.CLK(CLK),

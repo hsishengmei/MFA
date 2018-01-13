@@ -1,19 +1,19 @@
 module ram #(
-    parameter ADDR_LEN   = 16,
+    parameter ADDR_LEN   = 6,
     parameter DATA_LEN   = 8
     // parameter BOX_IDX   = 3
 
 )(
     input   CLK,
     input   [DATA_LEN-1:0]   wr_data,
-    input   [ADDR_LEN-1:0]   wr_addr,
-    input   [ADDR_LEN-1:0]   rd_addr, 
+    input   [ADDR_LEN+1:0]   wr_addr,
+    input   [ADDR_LEN+1:0]   rd_addr, 
     input   wr_en,
     
     output reg  [DATA_LEN-1:0]   Q
 );   
 
-    reg  [DATA_LEN-1:0] ram0 [2**ADDR_LEN-1:0];
+    reg  [DATA_LEN-1:0] ram0 [2**(ADDR_LEN+1)-1:0];
     // localparam DATA_WS  = 2**ADDR_LEN;
 
     `define MATA0        "matrix_A_0.dat"
