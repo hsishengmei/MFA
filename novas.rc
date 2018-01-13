@@ -201,7 +201,7 @@ StickSet-LineWidth = 1
 StickSet-FillColor = purple6
 StickSet-TextColor = black
 [FSM_Dlg-Print]
-Orientation = Landscape  
+Orientation = Landscape 
 [FileBrowser]
 nWaveOpenFsdbDirHistory = "\"/home/b03015/MFA/test_top_module.vcd\"" "\"/home/b03015/MFA/test_top_module.fsdb\""
 [Form]
@@ -237,7 +237,7 @@ filter_case_sensitive = FALSE
 filter_full_path = FALSE
 load_detail_for_funcov = FALSE
 sort_limit = 100000
-ignoreDBVersionChecking = FALSE     
+ignoreDBVersionChecking = FALSE    
 [HB]
 ViewSchematic = FALSE
 windowLayout = 0 0 804 500 182 214 804 148
@@ -309,8 +309,8 @@ ColorPrint = FALSE
 [QtDialog]
 QwInfoMsgDlg = 383,267,750,250
 QwUserAskDlg = 586,258,324,130
-openFileDlg = 475,190,602,483
-qWaveSignalDialog = 376,192,800,479
+openFileDlg = 105,48,602,483
+qWaveSignalDialog = 268,315,800,479
 [Session Cache]
 1 = string (session file name)
 2 = string (session file name)
@@ -520,8 +520,8 @@ waveform_vertical_scroll_bar = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-getSignalForm = 376 192 800 479 312 381 238 89
-viewPort = 2 31 796 518 207 65
+getSignalForm = 268 315 800 479 312 381 238 89
+viewPort = -59 39 796 518 207 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -988,7 +988,7 @@ AddImportArgument = TRUE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -tcl
 [turboSchema_Printer_Options]
-Orientation = Landscape  
+Orientation = Landscape 
 [turbo_library]
 bdb_load_scope = 
 [verisity]

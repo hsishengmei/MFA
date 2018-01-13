@@ -23,12 +23,12 @@ HOME=/home/b03015
 PATH=/usr/cad/synopsys/verdi/cur/bin:/usr/cad/synopsys/verdi/cur/nLint/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/amd64/syn/bin:/usr/bin/X11:/usr/cad/synopsys/coreConsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/cadence/IC/cur/tools/dfII/bin:/usr/cad/cadence/IC/cur/tools/dracula/bin:/usr/cad/cadence/IC/cur/tools/bin:/usr/cad/cadence/EDI/cur/tools/celtic/bin:/usr/cad/cadence/EDI/cur/tools/plato/bin:/usr/cad/cadence/EDI/cur/tools/dfII/bin:/usr/cad/cadence/EDI/cur/tools/fe/bin:/usr/cad/cadence/EDI/cur/tools/cdsdoc/bin:/usr/cad/cadence/EDI/cur/tools/bin:/usr/cad/cadence/EDI/cur//tools/tlfUtil/bin:/usr/cad/cadence/INCISIV/cur/tools/bin:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/bin:/usr/cad/cadence/INCISIV/cur/tools/dfII/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 MAIL=/var/spool/mail/b03015
 SHELL=/bin/csh
-SSH_CLIENT=1.164.192.246 52923 22
-SSH_CONNECTION=1.164.192.246 52923 192.168.0.175 22
-SSH_TTY=/dev/pts/7
+SSH_CLIENT=1.164.192.246 55020 22
+SSH_CONNECTION=1.164.192.246 55020 192.168.0.175 22
+SSH_TTY=/dev/pts/8
 TERM=xterm
-DISPLAY=localhost:15.0
-XDG_SESSION_ID=47862
+DISPLAY=localhost:16.0
+XDG_SESSION_ID=48063
 XDG_RUNTIME_DIR=/run/user/1000033
 HOSTTYPE=x86_64-linux
 VENDOR=unknown
@@ -50,7 +50,7 @@ QTDIR=/usr/lib64/qt-3.3
 QTINC=/usr/lib64/qt-3.3/include
 QTLIB=/usr/lib64/qt-3.3/lib
 LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/::/usr/cad/cadence/IC/cur/tools/lib:/usr/cad/cadence/EDI/cur//tools/tlfUtil/lib:/usr/cad/cadence/INCISIV/cur/tools/lib:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/lib:/usr/openwin/lib:/usr/dt/lib:/usr/lib:/usr/local/lib
-LM_LICENSE_FILE=26585@lsntu:5280@lsntu:5280@lsncu:5280@lsntu:
+LM_LICENSE_FILE=26585@lsntu:5280@lsntu:5280@lsncku:5280@lsnchu:
 ENCOUNTER=/usr/cad/cadence/EDI/cur/tools/fe
 OA_HOME=/usr/cad/cadence/EDI/cur/oa
 CDS_Netlisting_Mode=Analog
@@ -71,9 +71,9 @@ argv[1]=+access+r
 argv[2]=test_top_module.v
 argv[3]=top_module.v
 72 profile - 100
-          CPU/Mem usage: 0.020 sys,  0.030 user,  51.09M sys,  0.00M vm
+          CPU/Mem usage: 0.030 sys,  0.020 user,  51.11M sys,  0.00M vm
 73 VC callback profile - scalar:0 vector:0
-74 Fri Jan 12 23:54:32 2018
+74 Sat Jan 13 17:22:08 2018
 75 pliAppInit
 76 FSDB_GATE is disabled.
 77 Enable Parallel Dumping.
@@ -82,7 +82,7 @@ argv[3]=top_module.v
 80 LIBSSCORE=found /usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/libsscore_ius141.so through $LD_LIBRARY_PATH setting.
 81 argv[0]: test_top_module.fsdb
 82 argv[0]: 0
-83 argv[1]: (handle)0xb16fbb0 test_top_module
+83 argv[1]: (handle)0xaa1f8b8 test_top_module
 84 argv[2]: +mda
 85 FSDB Dumper for IUS, Release Verdi_M-2017.03, Linux, 02/13/2017
 86 (C) 1996 - 2017 by Synopsys, Inc.
@@ -92,44 +92,44 @@ argv[3]=top_module.v
 90 *Verdi* : Create FSDB file 'test_top_module.fsdb'
 91 sps_call_fsdbDumpvars at 0 : /home/b03015/MFA/test_top_module.v(40)
 92 argv[0]: 0
-93 argv[1]: (handle)0xb16fbb0 test_top_module
+93 argv[1]: (handle)0xaa1f8b8 test_top_module
 94 argv[2]: +mda
 95 *Verdi* : Begin traversing the scope (test_top_module), layer (0).
 96 *Verdi* : Enable +mda dumping.
 97 *Verdi* : End of traversing.
 98 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.030 sys,  0.040 user,  134.59M sys,  0.00M vm
-                   incr: 0.000 sys,  0.010 user,  3.68M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  3.68M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.010 user,  3.68M sys,  0.00M vm
+          CPU/Mem usage: 0.040 sys,  0.030 user,  134.64M sys,  0.00M vm
+                   incr: 0.000 sys,  0.010 user,  3.71M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  3.71M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.010 user,  3.71M sys,  0.00M vm
 
-          Count usage: 170 var,  131 idcode,  131 callback
-                 incr: 170 var,  131 idcode,  131 callback
-                 accu: 170 var,  131 idcode,  131 callback
-            accu incr: 170 var,  131 idcode,  131 callback
+          Count usage: 344 var,  320 idcode,  320 callback
+                 incr: 344 var,  320 idcode,  320 callback
+                 accu: 344 var,  320 idcode,  320 callback
+            accu incr: 344 var,  320 idcode,  320 callback
 99 VC callback profile - scalar:0 vector:0
-100 Fri Jan 12 23:54:32 2018
+100 Sat Jan 13 17:22:08 2018
 101 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.030 sys,  0.040 user,  135.65M sys,  0.00M vm
+          CPU/Mem usage: 0.040 sys,  0.030 user,  135.69M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-                   accu: 0.000 sys,  0.010 user,  4.73M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  4.76M sys,  0.00M vm
               accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
 
-          Count usage: 170 var,  131 idcode,  131 callback
+          Count usage: 344 var,  320 idcode,  320 callback
                  incr: 0 var,  0 idcode,  0 callback
-                 accu: 170 var,  131 idcode,  131 callback
+                 accu: 344 var,  320 idcode,  320 callback
             accu incr: 0 var,  0 idcode,  0 callback
-102 VC callback profile - scalar:27 vector:104
-103 Fri Jan 12 23:54:32 2018
-104 End of simulation at 80110
-105 VC callback profile - scalar:40231 vector:48953
-106 Fri Jan 12 23:54:40 2018
+102 VC callback profile - scalar:21 vector:299
+103 Sat Jan 13 17:22:08 2018
+104 End of simulation at 81350
+105 VC callback profile - scalar:34486 vector:54178
+106 Sat Jan 13 17:22:08 2018
 107 Begin FSDB profile info:
-108 FSDB Writer : bc1(40231) bcn(48953) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.027331) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+108 FSDB Writer : bc1(34486) bcn(54178) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.026418) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 109 End FSDB profile info
-110 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:1 BlockUsed:1
-111                        ProduceTime:0.875972899 ConsumerTime:0.013911421 Buffer:64MB
+110 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
+111                        ProduceTime:0.142013227 ConsumerTime:0.013223629 Buffer:64MB
 112 SimExit
 113 Sim process exit

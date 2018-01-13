@@ -12,7 +12,7 @@ module top_module #(parameter ADDR_LEN = 6, DATA_LEN = 8, BOX_IDX = 3) (
 	output done
 );
 
-wire     [15:0]	    cgr_wr_addr;
+wire     [ADDR_LEN+1:0]	    cgr_wr_addr;
 wire     wen_cgr;
 reg     clr_ram;
 

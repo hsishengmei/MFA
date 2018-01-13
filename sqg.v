@@ -17,6 +17,7 @@ module sqg #(parameter BOX_IDX = 3, parameter MAX_BOX = 3) (
     reg [BOX_IDX-1:0] count_rd_x, count_rd_y;
     reg [BOX_IDX-1:0] count_rd_x_r, count_rd_y_r;
     reg [BOX_IDX-1:0] count_wr_x, count_wr_y;
+    reg [BOX_IDX-1:0] count_wr_x_r, count_wr_y_r;
 
     localparam MEM_START_POINT  = 2 ** MAX_BOX;
 
@@ -24,9 +25,16 @@ module sqg #(parameter BOX_IDX = 3, parameter MAX_BOX = 3) (
         y = x + x_r;
         counter_w = counter_r + 1;
         wen_sqg = 0;
-        BC_rd_addr = { 1'b0, count_rd_x, 1'b0, count_rd_y };
-        BC_wr_addr = { 1'b0, count_wr_x, 1'b0, count_wr_y };
-        
+        BC_rd_addr[2*BOX_IDX+1] = 0;
+	BC_rd_addr[2*BOX_IDX:BOX_IDX+1] = count_rd_x_r;
+	BC_rd_addr[BOX_IDX] = 0;
+	BC_rd_addr[BOX_IDX-1:0] = count_rd_y_r;
+	BC_wr_addr = { 1'b0, count_wr_x[2:0], 1'b0, count_wr_y[2:0] };
+        BC_wr_addr[2*BOX_IDX+1] = 1;
+	BC_wr_addr[2*BOX_IDX:BOX_IDX+1] = count_wr_x_r;
+	BC_wr_addr[BOX_IDX] = 1;
+	BC_wr_addr[BOX_IDX-1:0] = count_wr_y_r;
+
     	count_wr_x = count_rd_x[BOX_IDX-1:1];
     	count_wr_y = count_rd_y[BOX_IDX-1:1];
 
@@ -56,9 +64,9 @@ module sqg #(parameter BOX_IDX = 3, parameter MAX_BOX = 3) (
                 count_rd_y = count_rd_y_r + 1;
             end
             else begin
+		wen_sqg = 1;
                 count_rd_x = count_rd_x_r + 1;
                 count_rd_y = count_rd_y_r;
-                wen_sqg = 1;
             end
         end
     end
@@ -69,12 +77,16 @@ module sqg #(parameter BOX_IDX = 3, parameter MAX_BOX = 3) (
             x_r <= 0;
             count_rd_x_r <= -1;
             count_rd_y_r <= 1;
+	    count_wr_x_r <= 0;
+	    count_wr_y_r <= 0;
         end
         else begin
             counter_r <= counter_w;
             x_r <= y;
             count_rd_x_r <= count_rd_x;
             count_rd_y_r <= count_rd_y;
+	    count_wr_x_r <= count_wr_x;
+	    count_wr_y_r <= count_wr_y;
         end
     end
 

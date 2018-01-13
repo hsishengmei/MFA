@@ -115,6 +115,7 @@ version = Verdi_M-2017.03
 50528646 = disabled
 50528678 = disabled
 50528526 = disabled
+184615126 = disabled
 [Editor]
 editorName = TurboEditor
 [Emacs]
@@ -200,7 +201,7 @@ StickSet-LineWidth = 1
 StickSet-FillColor = purple6
 StickSet-TextColor = black
 [FSM_Dlg-Print]
-Orientation = Landscape   
+Orientation = Landscape 
 [FileBrowser]
 nWaveOpenFsdbDirHistory = "\"/home/b03015/MFA/test_top_module.vcd\"" "\"/home/b03015/MFA/test_top_module.fsdb\""
 [Form]
@@ -236,7 +237,7 @@ filter_case_sensitive = FALSE
 filter_full_path = FALSE
 load_detail_for_funcov = FALSE
 sort_limit = 100000
-ignoreDBVersionChecking = FALSE      
+ignoreDBVersionChecking = FALSE    
 [HB]
 ViewSchematic = FALSE
 windowLayout = 0 0 804 500 182 214 804 148
@@ -520,7 +521,7 @@ scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
 getSignalForm = 376 192 800 479 312 381 238 89
-viewPort = 0 23 1536 801 207 65
+viewPort = 2 31 796 518 207 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98
@@ -987,7 +988,7 @@ AddImportArgument = TRUE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -tcl
 [turboSchema_Printer_Options]
-Orientation = Landscape   
+Orientation = Landscape 
 [turbo_library]
 bdb_load_scope = 
 [verisity]

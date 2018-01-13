@@ -13,7 +13,7 @@ module ram #(
     output reg  [DATA_LEN-1:0]   Q
 );   
 
-    reg  [DATA_LEN-1:0] ram0 [2**(ADDR_LEN+1)-1:0];
+    reg  [DATA_LEN-1:0] ram0 [2**(ADDR_LEN+2)-1:0];
     // localparam DATA_WS  = 2**ADDR_LEN;
 
     `define MATA0        "matrix_A_0.dat"
@@ -31,7 +31,7 @@ module ram #(
         end
         
         Q  <= ram0[rd_addr];
-        $writememh("result.txt", ram0);
+        // $writememh("result.txt", ram0);
     end
 
 endmodule
