@@ -1,4 +1,13 @@
 Command Line: /usr/cad/synopsys/verdi/cur/platform/LINUXAMD64/bin/Novas -nWave
 uname(Linux localhost.localdomain 3.10.0-514.21.1.el7.x86_64 #1 SMP Thu May 25 17:04:51 UTC 2017 x86_64)
-au time 1078.864051 0.025767 0.022641 delta 101216256 101216256 total 479817728 479817728
-
+Disabled AskUser2 Message (Response 0): Remember to save signals to a signal file.
+Do you want to continue?
+Disabled AskUser2 Message (Response 0): Remember to save signals to a signal file.
+Do you want to continue?
+Disabled AskUser2 Message (Response 0): Remember to save signals to a signal file.
+Do you want to continue?
+Disabled AskUser2 Message (Response 0): Remember to save signals to a signal file.
+Do you want to continue?
+Disabled AskUser2 Message (Response 0): Remember to save signals to a signal file.
+Do you want to continue?
+au time 12607.765650 447.965905 689.415188 delta 967380992 967380992 total 1345982464 1345982464

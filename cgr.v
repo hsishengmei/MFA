@@ -49,9 +49,11 @@ always @(posedge CLK or posedge RST) begin
         addr_y[DATA_LEN-1] <= 1;
     end
     else begin
-        counter_r <= counter_w;
-        addr_x[DATA_LEN-1:0] = {a, addr_x[DATA_LEN-1:1]};
-        addr_y[DATA_LEN-1:0] = {b, addr_y[DATA_LEN-1:1]};
+	counter_r <= counter_w;
+        if (counter_w[0] == 0) begin
+            addr_x[DATA_LEN-1:0] <= {a, addr_x[DATA_LEN-1:1]};
+            addr_y[DATA_LEN-1:0] <= {b, addr_y[DATA_LEN-1:1]};
+        end
     end
 end
 

@@ -23,12 +23,12 @@ HOME=/home/b03015
 PATH=/usr/cad/synopsys/verdi/cur/bin:/usr/cad/synopsys/verdi/cur/nLint/bin:/usr/bin/X11:/usr/cad/synopsys/primetime/cur/amd64/syn/bin:/usr/bin/X11:/usr/cad/synopsys/coreConsultant/cur/bin:/usr/cad/synopsys/synthesis/cur/amd64/syn/bin:/usr/cad/synopsys/lc/cur/bin:/usr/cad/cadence/IC/cur/tools/dfII/bin:/usr/cad/cadence/IC/cur/tools/dracula/bin:/usr/cad/cadence/IC/cur/tools/bin:/usr/cad/cadence/EDI/cur/tools/celtic/bin:/usr/cad/cadence/EDI/cur/tools/plato/bin:/usr/cad/cadence/EDI/cur/tools/dfII/bin:/usr/cad/cadence/EDI/cur/tools/fe/bin:/usr/cad/cadence/EDI/cur/tools/cdsdoc/bin:/usr/cad/cadence/EDI/cur/tools/bin:/usr/cad/cadence/EDI/cur//tools/tlfUtil/bin:/usr/cad/cadence/INCISIV/cur/tools/bin:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/bin:/usr/cad/cadence/INCISIV/cur/tools/dfII/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 MAIL=/var/spool/mail/b03015
 SHELL=/bin/csh
-SSH_CLIENT=223.137.91.1 61923 22
-SSH_CONNECTION=223.137.91.1 61923 192.168.0.175 22
+SSH_CLIENT=1.164.192.246 52923 22
+SSH_CONNECTION=1.164.192.246 52923 192.168.0.175 22
 SSH_TTY=/dev/pts/7
 TERM=xterm
 DISPLAY=localhost:15.0
-XDG_SESSION_ID=39888
+XDG_SESSION_ID=47862
 XDG_RUNTIME_DIR=/run/user/1000033
 HOSTTYPE=x86_64-linux
 VENDOR=unknown
@@ -38,7 +38,7 @@ SHLVL=1
 PWD=/home/b03015/MFA
 GROUP=users
 HOST=localhost.localdomain
-REMOTEHOST=223-137-91-1.emome-ip.hinet.net
+REMOTEHOST=1-164-192-246.dynamic-ip.hinet.net
 HOSTNAME=localhost.localdomain
 LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
 KDEDIRS=/usr
@@ -50,7 +50,7 @@ QTDIR=/usr/lib64/qt-3.3
 QTINC=/usr/lib64/qt-3.3/include
 QTLIB=/usr/lib64/qt-3.3/lib
 LD_LIBRARY_PATH=/usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/::/usr/cad/cadence/IC/cur/tools/lib:/usr/cad/cadence/EDI/cur//tools/tlfUtil/lib:/usr/cad/cadence/INCISIV/cur/tools/lib:/usr/cad/cadence/INCISIV/cur/tools/vtools/vfault/lib:/usr/openwin/lib:/usr/dt/lib:/usr/lib:/usr/local/lib
-LM_LICENSE_FILE=26585@lsntu:5280@lsntu:5280@lsncku:5280@lsnchu:
+LM_LICENSE_FILE=26585@lsntu:5280@lsntu:5280@lsncu:5280@lsntu:
 ENCOUNTER=/usr/cad/cadence/EDI/cur/tools/fe
 OA_HOME=/usr/cad/cadence/EDI/cur/oa
 CDS_Netlisting_Mode=Analog
@@ -71,9 +71,9 @@ argv[1]=+access+r
 argv[2]=test_top_module.v
 argv[3]=top_module.v
 72 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.030 user,  51.11M sys,  0.00M vm
+          CPU/Mem usage: 0.020 sys,  0.030 user,  51.09M sys,  0.00M vm
 73 VC callback profile - scalar:0 vector:0
-74 Mon Dec 18 14:06:58 2017
+74 Fri Jan 12 23:54:32 2018
 75 pliAppInit
 76 FSDB_GATE is disabled.
 77 Enable Parallel Dumping.
@@ -82,37 +82,37 @@ argv[3]=top_module.v
 80 LIBSSCORE=found /usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/libsscore_ius141.so through $LD_LIBRARY_PATH setting.
 81 argv[0]: test_top_module.fsdb
 82 argv[0]: 0
-83 argv[1]: (handle)0xaa1bc08 test_top_module
+83 argv[1]: (handle)0xb16fbb0 test_top_module
 84 argv[2]: +mda
 85 FSDB Dumper for IUS, Release Verdi_M-2017.03, Linux, 02/13/2017
 86 (C) 1996 - 2017 by Synopsys, Inc.
-87 sps_call_fsdbDumpfile at 0 : /home/b03015/MFA/test_top_module.v(28)
+87 sps_call_fsdbDumpfile at 0 : /home/b03015/MFA/test_top_module.v(39)
 88 argv[0]: test_top_module.fsdb
 89 *Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
 90 *Verdi* : Create FSDB file 'test_top_module.fsdb'
-91 sps_call_fsdbDumpvars at 0 : /home/b03015/MFA/test_top_module.v(29)
+91 sps_call_fsdbDumpvars at 0 : /home/b03015/MFA/test_top_module.v(40)
 92 argv[0]: 0
-93 argv[1]: (handle)0xaa1bc08 test_top_module
+93 argv[1]: (handle)0xb16fbb0 test_top_module
 94 argv[2]: +mda
 95 *Verdi* : Begin traversing the scope (test_top_module), layer (0).
 96 *Verdi* : Enable +mda dumping.
 97 *Verdi* : End of traversing.
 98 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.040 sys,  0.050 user,  134.61M sys,  0.00M vm
-                   incr: 0.010 sys,  0.010 user,  3.68M sys,  0.00M vm
-                   accu: 0.010 sys,  0.010 user,  3.68M sys,  0.00M vm
-              accu incr: 0.010 sys,  0.010 user,  3.68M sys,  0.00M vm
+          CPU/Mem usage: 0.030 sys,  0.040 user,  134.59M sys,  0.00M vm
+                   incr: 0.000 sys,  0.010 user,  3.68M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  3.68M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.010 user,  3.68M sys,  0.00M vm
 
           Count usage: 170 var,  131 idcode,  131 callback
                  incr: 170 var,  131 idcode,  131 callback
                  accu: 170 var,  131 idcode,  131 callback
             accu incr: 170 var,  131 idcode,  131 callback
 99 VC callback profile - scalar:0 vector:0
-100 Mon Dec 18 14:06:58 2017
+100 Fri Jan 12 23:54:32 2018
 101 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.040 sys,  0.050 user,  135.66M sys,  0.00M vm
+          CPU/Mem usage: 0.030 sys,  0.040 user,  135.65M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-                   accu: 0.010 sys,  0.010 user,  4.73M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  4.73M sys,  0.00M vm
               accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
 
           Count usage: 170 var,  131 idcode,  131 callback
@@ -120,16 +120,16 @@ argv[3]=top_module.v
                  accu: 170 var,  131 idcode,  131 callback
             accu incr: 0 var,  0 idcode,  0 callback
 102 VC callback profile - scalar:27 vector:104
-103 Mon Dec 18 14:06:58 2017
-104 End of simulation at 1030
-105 VC callback profile - scalar:441 vector:1029
-106 Mon Dec 18 14:06:58 2017
+103 Fri Jan 12 23:54:32 2018
+104 End of simulation at 80110
+105 VC callback profile - scalar:40231 vector:48953
+106 Fri Jan 12 23:54:40 2018
 107 Begin FSDB profile info:
-108 FSDB Writer : bc1(441) bcn(1029) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.003296) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+108 FSDB Writer : bc1(40231) bcn(48953) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.027331) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 109 End FSDB profile info
-110 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:0
-111                        ProduceTime:0.107002498 ConsumerTime:0.000000000 Buffer:64MB
+110 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:1 BlockUsed:1
+111                        ProduceTime:0.875972899 ConsumerTime:0.013911421 Buffer:64MB
 112 SimExit
 113 Sim process exit

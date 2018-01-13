@@ -1,0 +1,77 @@
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 {/home/b03015/MFA/test_top_module.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/test_top_module"
+wvGetSignalSetScope -win $_nWave1 "/test_top_module/MAIN/SQG"
+wvGetSignalSetScope -win $_nWave1 "/test_top_module/MAIN/RAM_CTRL"
+wvGetSignalSetScope -win $_nWave1 "/test_top_module/MAIN/RAM"
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/test_top_module/MAIN/RAM/CLK} \
+{/test_top_module/MAIN/RAM/Q\[7:0\]} \
+{/test_top_module/MAIN/RAM/ram0\[63:0\]} \
+{/test_top_module/MAIN/RAM/rd_addr\[5:0\]} \
+{/test_top_module/MAIN/RAM/wr_addr\[5:0\]} \
+{/test_top_module/MAIN/RAM/wr_data\[7:0\]} \
+{/test_top_module/MAIN/RAM/wr_en} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 7 )} 
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvGetSignalSetScope -win $_nWave1 "/test_top_module"
+wvSetPosition -win $_nWave1 {("G1" 9)}
+wvSetPosition -win $_nWave1 {("G1" 9)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/test_top_module/MAIN/RAM/CLK} \
+{/test_top_module/MAIN/RAM/Q\[7:0\]} \
+{/test_top_module/MAIN/RAM/ram0\[63:0\]} \
+{/test_top_module/MAIN/RAM/rd_addr\[5:0\]} \
+{/test_top_module/MAIN/RAM/wr_addr\[5:0\]} \
+{/test_top_module/MAIN/RAM/wr_data\[7:0\]} \
+{/test_top_module/MAIN/RAM/wr_en} \
+{/test_top_module/RST} \
+{/test_top_module/symbol\[1:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 8 9 )} 
+wvSetPosition -win $_nWave1 {("G1" 9)}
+wvSelectSignal -win $_nWave1 {( "G1" 3 )} 
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("G1" 9)}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 6 7 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 7 )} 
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 3 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 3 4 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 3 4 )} 
+wvSetRadix -win $_nWave1 -format UDec
+wvSelectSignal -win $_nWave1 {( "G1" 9 )} 
+wvExpandBus -win $_nWave1 {("G1" 9)}
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 2
+wvScrollUp -win $_nWave1 3
+wvScrollUp -win $_nWave1 3
+wvScrollUp -win $_nWave1 4
+wvScrollDown -win $_nWave1 0
+wvScrollUp -win $_nWave1 5
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 2
+wvScrollUp -win $_nWave1 12
+wvScrollDown -win $_nWave1 0
+wvScrollDown -win $_nWave1 0

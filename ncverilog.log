@@ -1,12 +1,12 @@
 ncverilog: 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
-TOOL:	ncverilog	14.10-s005: Started on Dec 18, 2017 at 14:06:58 CST
+TOOL:	ncverilog	14.10-s005: Started on Jan 12, 2018 at 23:54:32 CST
 ncverilog
 	+access+r
 	test_top_module.v
 	top_module.v
 Recompiling... reason: file './test_top_module.v' is newer than expected.
-	expected: Mon Dec 18 14:02:00 2017
-	actual:   Mon Dec 18 14:06:51 2017
+	expected: Fri Jan 12 23:43:48 2018
+	actual:   Fri Jan 12 23:54:30 2018
 file: test_top_module.v
 	module worklib.test_top_module:v
 		errors: 0, warnings: 0
@@ -14,14 +14,14 @@ file: test_top_module.v
 	Elaborating the design hierarchy:
 	.addr(cgr_wr_addr),
 	                |
-ncelab: *W,CUVMPW (./top_module.v,36|17): port sizes differ in port connection (16/6).
+ncelab: *W,CUVMPW (./top_module.v,35|17): port sizes differ in port connection (16/6).
     .XY(cgr_wr_addr), 
                   |
-ncelab: *W,CUVMPW (./top_module.v,60|18): port sizes differ in port connection (16/6).
+ncelab: *W,CUVMPW (./top_module.v,59|18): port sizes differ in port connection (16/6).
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.test_top_module:v <0x284a2b37>
-			streams:   9, words:  5750
+		worklib.test_top_module:v <0x5927cb45>
+			streams:  11, words:  6322
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -31,7 +31,7 @@ ncelab: *W,CUVMPW (./top_module.v,60|18): port sizes differ in port connection (
 		Scalar wires:         9       -
 		Expanded wires:       6       1
 		Vectored wires:       9       -
-		Always blocks:       10      10
+		Always blocks:        9       9
 		Initial blocks:       7       7
 		Pseudo assignments:   2       2
 	Writing initial simulation snapshot: worklib.test_top_module:v
@@ -46,7 +46,7 @@ FSDB Dumper for IUS, Release Verdi_M-2017.03, Linux, 02/13/2017
 *Verdi* : Begin traversing the scope (test_top_module), layer (0).
 *Verdi* : Enable +mda dumping.
 *Verdi* : End of traversing.
-Simulation complete via $finish(1) at time 1030 NS + 0
-./test_top_module.v:59         $finish;
+Simulation complete via $finish(1) at time 80110 NS + 0
+./test_top_module.v:70         $finish;
 ncsim> exit
-TOOL:	ncverilog	14.10-s005: Exiting on Dec 18, 2017 at 14:06:58 CST  (total: 00:00:00)
+TOOL:	ncverilog	14.10-s005: Exiting on Jan 12, 2018 at 23:54:40 CST  (total: 00:00:08)

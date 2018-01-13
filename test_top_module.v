@@ -3,21 +3,22 @@ module test_top_module ();
     integer fp_r, cnt;
 
     reg CLK, RST;
-    reg [3999:0] data;
+    reg [0:3999] data;
     reg [1:0] symbol;
     reg BC_mode;
+    reg [15:0] counter_w, counter_r;
     wire done;
         
     always @(*) begin
         counter_w = counter_r;
     end
 
-    always @(negedge CLK or negedge RST) begin
+    always @(posedge CLK or posedge RST) begin
         if (~RST) begin
             counter_r <= counter_w + 1;
             if (counter_r[0] == 0) begin
-                data <= {2'b00, data[3999:2]};//'
-                symbol <= data[1:0];        
+                data <= {data[2:3999], 2'b00};//'
+                symbol <= data[0:1];        
             end    
         end
         else begin
@@ -62,7 +63,7 @@ module test_top_module ();
         BC_mode = 0; // initial value
         @(negedge RST); // wait for reset
         BC_mode = 1;
-        repeat(50) @(posedge CLK);
+        repeat(4004) @(posedge CLK);
         // BC_mode = 0;
         // repeat(16) @(posedge CLK);
     
