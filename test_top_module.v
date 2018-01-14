@@ -26,7 +26,7 @@ module test_top_module ();
         end
     end
 
-    top_module #(.ADDR_LEN(6), .DATA_LEN(8), .BOX_IDX(3)) MAIN (
+    top_module #(.ADDR_LEN(6), .DATA_LEN(12), .BOX_IDX(3)) MAIN (
         .CLK(CLK),
         .RST(RST),
         .symbol(symbol),

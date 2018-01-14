@@ -327,3 +327,4 @@ wvSetCursor -win $_nWave1 81393.130179 -snap {("G1" 11)}
 wvDisplayGridCount -win $_nWave1 -off
 wvGetSignalClose -win $_nWave1
 wvReloadFile -win $_nWave1
+wvExit

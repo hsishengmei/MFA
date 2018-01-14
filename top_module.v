@@ -3,7 +3,7 @@
 `include "ram_ctrl.v"
 `include "ram.v"
 
-module top_module #(parameter ADDR_LEN = 6, DATA_LEN = 8, BOX_IDX = 3) (
+module top_module #(parameter ADDR_LEN = 6, DATA_LEN = 12, BOX_IDX = 3) (
 	input CLK,
 	input RST,
 	input [1:0]  symbol,
@@ -34,7 +34,7 @@ cgr CGR (
 	.wen_cgr(wen_cgr)
 );
 
-sqg #(.BOX_IDX(BOX_IDX)) SQG (
+sqg #(.BOX_IDX(BOX_IDX), .DATA_LEN(DATA_LEN)) SQG (
 	.CLK(CLK),
 	.RST(RST),
 	.BC_mode(BC_mode),

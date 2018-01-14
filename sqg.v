@@ -1,6 +1,5 @@
 module sqg #(parameter BOX_IDX = 3, 
-    parameter MAX_BOX = 3, 
-    parameter DATA_LEN = 8) (
+    parameter DATA_LEN = 12) (
 
     input CLK,
     input RST,
@@ -39,7 +38,7 @@ module sqg #(parameter BOX_IDX = 3,
 
         if (counter_r[2*BOX_IDX] == 0) begin
             count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
-            count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX];
+            count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
             count_wr_x[BOX_IDX-1] = 0;
             count_wr_y[BOX_IDX-1] = 0;
         end
