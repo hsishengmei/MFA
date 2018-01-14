@@ -37,15 +37,25 @@ module sqg #(parameter BOX_IDX = 3,
         BC_wr_addr[BOX_IDX] = 1;
         BC_wr_addr[BOX_IDX-1:0] = count_wr_y_r;
 
-        count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
-        count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
-        count_wr_x[BOX_IDX-1] = 0;
         if (counter_r[2*BOX_IDX] == 0) begin
+            count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
+            count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
+            count_wr_x[BOX_IDX-1] = 0;
             count_wr_y[BOX_IDX-1] = 0;
         end
-	else begin
-            count_wr_x[BOX_IDX-2] = 0;
-            count_wr_y[BOX_IDX-1] = 1;
+	    else begin
+            if (counter_r[2*BOX_IDX-1] == 0) begin
+                count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
+                count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-2:BOX_IDX];
+                count_wr_x[BOX_IDX-1] = 0;
+                count_wr_y[BOX_IDX-1] = 1;
+            end
+            else begin
+                count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
+                count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-3:BOX_IDX-1];
+                count_wr_x[BOX_IDX-1] = 0;
+                count_wr_y[BOX_IDX-1] = 1;
+            end
         end
 
         if (RST | BC_mode) begin
@@ -55,6 +65,11 @@ module sqg #(parameter BOX_IDX = 3,
             y = 0;
         end
         else begin       
+
+            count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
+            count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
+            count_wr_x[BOX_IDX-1] = 0;
+
             if (counter_r[2*BOX_IDX] == 0) begin // 1st loop
                 if (counter_r[1:0] == 0) begin
                     count_rd_x = count_rd_x_r + 1;
