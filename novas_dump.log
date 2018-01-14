@@ -71,9 +71,9 @@ argv[1]=+access+r
 argv[2]=test_top_module.v
 argv[3]=top_module.v
 72 profile - 100
-          CPU/Mem usage: 0.030 sys,  0.020 user,  51.12M sys,  0.00M vm
+          CPU/Mem usage: 0.020 sys,  0.040 user,  51.12M sys,  0.00M vm
 73 VC callback profile - scalar:0 vector:0
-74 Sun Jan 14 15:07:27 2018
+74 Sun Jan 14 15:56:16 2018
 75 pliAppInit
 76 FSDB_GATE is disabled.
 77 Enable Parallel Dumping.
@@ -82,7 +82,7 @@ argv[3]=top_module.v
 80 LIBSSCORE=found /usr/cad/synopsys/verdi/cur/share/PLI/IUS/LINUX/libsscore_ius141.so through $LD_LIBRARY_PATH setting.
 81 argv[0]: test_top_module.fsdb
 82 argv[0]: 0
-83 argv[1]: (handle)0xa487838 test_top_module
+83 argv[1]: (handle)0xbc5d6a8 test_top_module
 84 argv[2]: +mda
 85 FSDB Dumper for IUS, Release Verdi_M-2017.03, Linux, 02/13/2017
 86 (C) 1996 - 2017 by Synopsys, Inc.
@@ -92,27 +92,27 @@ argv[3]=top_module.v
 90 *Verdi* : Create FSDB file 'test_top_module.fsdb'
 91 sps_call_fsdbDumpvars at 0 : /home/b03015/MFA/test_top_module.v(40)
 92 argv[0]: 0
-93 argv[1]: (handle)0xa487838 test_top_module
+93 argv[1]: (handle)0xbc5d6a8 test_top_module
 94 argv[2]: +mda
 95 *Verdi* : Begin traversing the scope (test_top_module), layer (0).
 96 *Verdi* : Enable +mda dumping.
 97 *Verdi* : End of traversing.
 98 fsdbDumpvars traverse var: profile - 
-          CPU/Mem usage: 0.030 sys,  0.030 user,  134.63M sys,  0.00M vm
-                   incr: 0.000 sys,  0.000 user,  3.69M sys,  0.00M vm
-                   accu: 0.000 sys,  0.000 user,  3.69M sys,  0.00M vm
-              accu incr: 0.000 sys,  0.000 user,  3.69M sys,  0.00M vm
+          CPU/Mem usage: 0.030 sys,  0.050 user,  134.63M sys,  0.00M vm
+                   incr: 0.000 sys,  0.010 user,  3.69M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  3.69M sys,  0.00M vm
+              accu incr: 0.000 sys,  0.010 user,  3.69M sys,  0.00M vm
 
           Count usage: 216 var,  192 idcode,  192 callback
                  incr: 216 var,  192 idcode,  192 callback
                  accu: 216 var,  192 idcode,  192 callback
             accu incr: 216 var,  192 idcode,  192 callback
 99 VC callback profile - scalar:0 vector:0
-100 Sun Jan 14 15:07:27 2018
+100 Sun Jan 14 15:56:16 2018
 101 fsdbDumpvars: profile - 
-          CPU/Mem usage: 0.030 sys,  0.030 user,  135.68M sys,  0.00M vm
+          CPU/Mem usage: 0.030 sys,  0.050 user,  135.68M sys,  0.00M vm
                    incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
-                   accu: 0.000 sys,  0.000 user,  4.74M sys,  0.00M vm
+                   accu: 0.000 sys,  0.010 user,  4.74M sys,  0.00M vm
               accu incr: 0.000 sys,  0.000 user,  1.05M sys,  0.00M vm
 
           Count usage: 216 var,  192 idcode,  192 callback
@@ -120,16 +120,16 @@ argv[3]=top_module.v
                  accu: 216 var,  192 idcode,  192 callback
             accu incr: 0 var,  0 idcode,  0 callback
 102 VC callback profile - scalar:21 vector:171
-103 Sun Jan 14 15:07:27 2018
+103 Sun Jan 14 15:56:16 2018
 104 End of simulation at 81790
-105 VC callback profile - scalar:34606 vector:50880
-106 Sun Jan 14 15:07:27 2018
+105 VC callback profile - scalar:34606 vector:49093
+106 Sun Jan 14 15:56:25 2018
 107 Begin FSDB profile info:
-108 FSDB Writer : bc1(34606) bcn(50880) mtf/stf(0/0)
-FSDB Writer elapsed time : flush(0.025129) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
+108 FSDB Writer : bc1(34606) bcn(49093) mtf/stf(0/0)
+FSDB Writer elapsed time : flush(0.025816) io wait(0.000000) theadpool wait(0.000000) target functin(0.000000)
 FSDB Writer cpu time : MT Compression : 0
 109 End FSDB profile info
-110 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:0 BlockUsed:1
-111                        ProduceTime:0.136541760 ConsumerTime:0.012404592 Buffer:64MB
+110 Parallel profile    -  Flush:3 Expand:0 ProduceWait:0 ConsumerWait:1 BlockUsed:1
+111                        ProduceTime:1.099318653 ConsumerTime:0.012262559 Buffer:64MB
 112 SimExit
 113 Sim process exit

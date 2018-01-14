@@ -219,3 +219,111 @@ wvReloadFile -win $_nWave1
 wvDisplayGridCount -win $_nWave1 -off
 wvGetSignalClose -win $_nWave1
 wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 23 )} 
+wvExpandBus -win $_nWave1 {("G1" 23)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 20 )} 
+wvSetPosition -win $_nWave1 {("G1" 20)}
+wvExpandBus -win $_nWave1 {("G1" 20)}
+wvSetPosition -win $_nWave1 {("G1" 33)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvScrollDown -win $_nWave1 2
+wvScrollUp -win $_nWave1 1
+wvScrollUp -win $_nWave1 1
+wvScrollDown -win $_nWave1 1
+wvSetCursor -win $_nWave1 81519.902725 -snap {("G1" 12)}
+wvSetCursor -win $_nWave1 81774.700506 -snap {("G1" 11)}
+wvSelectSignal -win $_nWave1 {( "G1" 12 )} 
+wvSetCursor -win $_nWave1 81513.452149 -snap {("G1" 12)}
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvExpandBus -win $_nWave1 {("G1" 6)}
+wvSetPosition -win $_nWave1 {("G1" 36)}
+wvSelectSignal -win $_nWave1 {( "G1" 23 )} 
+wvSetPosition -win $_nWave1 {("G1" 23)}
+wvCollapseBus -win $_nWave1 {("G1" 23)}
+wvSetPosition -win $_nWave1 {("G1" 23)}
+wvSetPosition -win $_nWave1 {("G1" 33)}
+wvSelectSignal -win $_nWave1 {( "G1" 23 )} 
+wvSetPosition -win $_nWave1 {("G1" 23)}
+wvExpandBus -win $_nWave1 {("G1" 23)}
+wvSetPosition -win $_nWave1 {("G1" 36)}
+wvSelectSignal -win $_nWave1 {( "G1" 22 )} 
+wvSetPosition -win $_nWave1 {("G1" 22)}
+wvExpandBus -win $_nWave1 {("G1" 22)}
+wvSetPosition -win $_nWave1 {("G1" 39)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 81573.657531 -snap {("G1" 6)}
+wvSetCursor -win $_nWave1 81552.155609 -snap {("G1" 6)}
+wvSelectSignal -win $_nWave1 {( "G1" 22 )} 
+wvSetPosition -win $_nWave1 {("G1" 22)}
+wvCollapseBus -win $_nWave1 {("G1" 22)}
+wvSetPosition -win $_nWave1 {("G1" 22)}
+wvSetPosition -win $_nWave1 {("G1" 36)}
+wvSelectSignal -win $_nWave1 {( "G1" 27 )} 
+wvSetPosition -win $_nWave1 {("G1" 27)}
+wvExpandBus -win $_nWave1 {("G1" 27)}
+wvSetPosition -win $_nWave1 {("G1" 39)}
+wvSelectSignal -win $_nWave1 {( "G1" 27 )} 
+wvSetPosition -win $_nWave1 {("G1" 27)}
+wvCollapseBus -win $_nWave1 {("G1" 27)}
+wvSetPosition -win $_nWave1 {("G1" 27)}
+wvSetPosition -win $_nWave1 {("G1" 36)}
+wvSelectSignal -win $_nWave1 {( "G1" 23 )} 
+wvSetPosition -win $_nWave1 {("G1" 23)}
+wvCollapseBus -win $_nWave1 {("G1" 23)}
+wvSetPosition -win $_nWave1 {("G1" 23)}
+wvSetPosition -win $_nWave1 {("G1" 33)}
+wvSelectSignal -win $_nWave1 {( "G1" 26 )} 
+wvSetPosition -win $_nWave1 {("G1" 25)}
+wvExpandBus -win $_nWave1 {("G1" 25)}
+wvSetPosition -win $_nWave1 {("G1" 40)}
+wvSelectSignal -win $_nWave1 {( "G1" 25 )} 
+wvSetPosition -win $_nWave1 {("G1" 25)}
+wvCollapseBus -win $_nWave1 {("G1" 25)}
+wvSetPosition -win $_nWave1 {("G1" 25)}
+wvSetPosition -win $_nWave1 {("G1" 33)}
+wvSelectSignal -win $_nWave1 {( "G1" 26 )} 
+wvSetPosition -win $_nWave1 {("G1" 26)}
+wvCollapseBus -win $_nWave1 {("G1" 26)}
+wvSetPosition -win $_nWave1 {("G1" 26)}
+wvSelectSignal -win $_nWave1 {( "G1" 11 )} 
+wvSetPosition -win $_nWave1 {("G1" 11)}
+wvCollapseBus -win $_nWave1 {("G1" 11)}
+wvSetPosition -win $_nWave1 {("G1" 11)}
+wvSetPosition -win $_nWave1 {("G1" 19)}
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvCollapseBus -win $_nWave1 {("G1" 6)}
+wvSetPosition -win $_nWave1 {("G1" 6)}
+wvSetPosition -win $_nWave1 {("G1" 16)}
+wvSetCursor -win $_nWave1 81182.322543 -snap {("G2" 0)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 8 )} 
+wvSetPosition -win $_nWave1 {("G1" 8)}
+wvExpandBus -win $_nWave1 {("G1" 8)}
+wvSetPosition -win $_nWave1 {("G1" 23)}
+wvSetCursor -win $_nWave1 81393.130179 -snap {("G1" 11)}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1

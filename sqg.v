@@ -39,23 +39,28 @@ module sqg #(parameter BOX_IDX = 3,
 
         if (counter_r[2*BOX_IDX] == 0) begin
             count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
-            count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
+            count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX];
             count_wr_x[BOX_IDX-1] = 0;
             count_wr_y[BOX_IDX-1] = 0;
         end
-	    else begin
-            if (counter_r[2*BOX_IDX-1] == 0) begin
-                count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
+	else begin
+	    //$display("%d, counter_r: %d", counter_r[BOX_IDX], counter_r);
+            if (counter_r[2*BOX_IDX-2] == 0) begin
+                count_wr_x[BOX_IDX-3:0] = counter_r[BOX_IDX-1:2];
                 count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-2:BOX_IDX];
                 count_wr_x[BOX_IDX-1] = 0;
+		count_wr_x[BOX_IDX-2] = 0;
                 count_wr_y[BOX_IDX-1] = 1;
             end
             else begin
-                count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
-                count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-3:BOX_IDX-1];
+                // count_wr_x[BOX_IDX-3:0] = counter_r[BOX_IDX-1:2];
+                count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-2:BOX_IDX];
                 count_wr_x[BOX_IDX-1] = 0;
-                count_wr_y[BOX_IDX-1] = 1;
+                count_wr_x[BOX_IDX-2] = 0;
+		count_wr_x[BOX_IDX-3] = 0;
+		count_wr_y[BOX_IDX-1] = 1;
             end
+	    //$display("wr_x: %d, wr_y: %d", count_wr_x, count_wr_y);
         end
 
         if (RST | BC_mode) begin
@@ -66,9 +71,9 @@ module sqg #(parameter BOX_IDX = 3,
         end
         else begin       
 
-            count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
-            count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
-            count_wr_x[BOX_IDX-1] = 0;
+            //count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
+            //count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
+            //count_wr_x[BOX_IDX-1] = 0;
 
             if (counter_r[2*BOX_IDX] == 0) begin // 1st loop
                 if (counter_r[1:0] == 0) begin

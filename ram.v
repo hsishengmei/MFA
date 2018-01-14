@@ -31,7 +31,7 @@ module ram #(
         end
         
         Q  <= ram0[rd_addr];
-        //$writememh("result.txt", ram0);
+        $writememh("result.txt", ram0);
     end
 
 endmodule
