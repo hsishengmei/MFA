@@ -1,12 +1,12 @@
 ncverilog: 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
-TOOL:	ncverilog	14.10-s005: Started on Jan 14, 2018 at 12:41:33 CST
+TOOL:	ncverilog	14.10-s005: Started on Jan 14, 2018 at 15:07:27 CST
 ncverilog
 	+access+r
 	test_top_module.v
 	top_module.v
 Recompiling... reason: file './sqg.v' is newer than expected.
-	expected: Sun Jan 14 12:32:01 2018
-	actual:   Sun Jan 14 12:41:33 2018
+	expected: Sun Jan 14 15:06:40 2018
+	actual:   Sun Jan 14 15:07:26 2018
 file: top_module.v
 	module worklib.sqg:v
 		errors: 0, warnings: 0
@@ -14,8 +14,8 @@ file: top_module.v
 	Elaborating the design hierarchy:
 	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.sqg:v <0x6ece4565>
-			streams:   6, words:  5131
+		worklib.sqg:v <0x311526b6>
+			streams:   6, words:  7422
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -39,7 +39,7 @@ FSDB Dumper for IUS, Release Verdi_M-2017.03, Linux, 02/13/2017
 *Verdi* : Begin traversing the scope (test_top_module), layer (0).
 *Verdi* : Enable +mda dumping.
 *Verdi* : End of traversing.
-Simulation complete via $finish(1) at time 82070 NS + 0
+Simulation complete via $finish(1) at time 81790 NS + 0
 ./test_top_module.v:70         $finish;
 ncsim> exit
-TOOL:	ncverilog	14.10-s005: Exiting on Jan 14, 2018 at 12:41:34 CST  (total: 00:00:01)
+TOOL:	ncverilog	14.10-s005: Exiting on Jan 14, 2018 at 15:07:28 CST  (total: 00:00:01)

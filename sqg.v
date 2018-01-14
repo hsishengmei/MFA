@@ -40,9 +40,10 @@ module sqg #(parameter BOX_IDX = 3,
         count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
         count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
         count_wr_x[BOX_IDX-1] = 0;
-        if (counter_r[2*BOX_IDX-1] == 0) begin
+        if (counter_r[2*BOX_IDX] == 0) begin
             count_wr_y[BOX_IDX-1] = 0;
-        else begin
+        end
+	else begin
             count_wr_x[BOX_IDX-2] = 0;
             count_wr_y[BOX_IDX-1] = 1;
         end
