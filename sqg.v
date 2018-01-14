@@ -21,7 +21,7 @@ module sqg #(parameter BOX_IDX = 3,
     reg [BOX_IDX-1:0] count_wr_x, count_wr_y;
     reg [BOX_IDX-1:0] count_wr_x_r, count_wr_y_r;
 
-    localparam MEM_START_POINT  = 2 ** MAX_BOX;
+   // localparam MEM_START_POINT  = 2 ** MAX_BOX;
 
     always @(*) begin
         y = x + x_r;
@@ -39,9 +39,13 @@ module sqg #(parameter BOX_IDX = 3,
 
         count_wr_x[BOX_IDX-2:0] = counter_r[BOX_IDX:2];
         count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
-        count_rd_x[BOX_IDX-1] = 0;
-        count_rd_y[BOX_IDX-1] = 0;
-        // mask_rd_x = 3'b011;
+        count_wr_x[BOX_IDX-1] = 0;
+        count_wr_y[BOX_IDX-1] = 0;
+        if (counter_r[2*BOX_IDX] == 1) begin
+	    
+
+	end
+	// mask_rd_x = 3'b011;
         // mask_rd_y = 3'b011;
         // mask_wr_x = 3'b011;
         // mask_wr_y = 3'b011;
@@ -54,19 +58,18 @@ module sqg #(parameter BOX_IDX = 3,
         y = 0;
         end
         else begin            
-            // if (counter_w[2*BOX_IDX] == 1) begin
-            //     count_rd_x[BOX_IDX-1] = 0;
-            //     count_rd_y[BOX_IDX-1] = 1;
-            //     count_wr_x[BOX_IDX-1] = 0;
+    //        if (counter_r[2*BOX_IDX] == 1) begin
+      //           count_rd_x[BOX_IDX-1] = 0;
+        //         count_rd_y[BOX_IDX-1] = 1;
+          //       count_wr_x[BOX_IDX-1] = 0;
             //     count_wr_y[BOX_IDX-1] = 1;
-            // end
+            //end
             if (counter_r[1:0] == 0) begin
                 count_rd_x = count_rd_x_r + 1;
                 count_rd_y = count_rd_y_r;
                 if (counter_r != 0) begin
                     wen_sqg = 1;
                 end
-            end
             end
             else if (counter_r[1:0] == 1) begin
             y = x;
