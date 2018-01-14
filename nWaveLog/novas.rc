@@ -237,7 +237,7 @@ filter_case_sensitive = FALSE
 filter_full_path = FALSE
 load_detail_for_funcov = FALSE
 sort_limit = 100000
-ignoreDBVersionChecking = FALSE   
+ignoreDBVersionChecking = FALSE  
 [HB]
 ViewSchematic = FALSE
 windowLayout = 0 0 804 500 182 214 804 148
@@ -308,9 +308,11 @@ PaperSize = A4 - 210x297 (mm)
 ColorPrint = FALSE
 [QtDialog]
 QwInfoMsgDlg = 383,267,750,250
-QwUserAskDlg = 586,258,324,130
-openFileDlg = 105,48,602,483
-qWaveSignalDialog = 268,315,800,479
+QwUserAskDlg = 586,258,324,111
+QwWarnMsgDlg = 458,267,600,250
+openFileDlg = 105,56,602,483
+ActiveFileDialog = 137,299,554,255
+qWaveSignalDialog = 338,210,800,479
 [Session Cache]
 1 = string (session file name)
 2 = string (session file name)
@@ -520,8 +522,8 @@ waveform_vertical_scroll_bar = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-getSignalForm = 268 315 800 479 312 381 238 89
-viewPort = -59 39 796 518 207 65
+getSignalForm = 338 210 800 479 312 381 238 89
+viewPort = 0 23 1536 801 207 65
 signalSpacing = 5
 digitalSignalHeight = 15
 analogSignalHeight = 98

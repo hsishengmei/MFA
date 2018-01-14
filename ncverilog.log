@@ -1,25 +1,21 @@
 ncverilog: 14.10-s005: (c) Copyright 1995-2014 Cadence Design Systems, Inc.
-TOOL:	ncverilog	14.10-s005: Started on Jan 13, 2018 at 23:49:40 CST
+TOOL:	ncverilog	14.10-s005: Started on Jan 14, 2018 at 12:41:33 CST
 ncverilog
 	+access+r
 	test_top_module.v
 	top_module.v
-Recompiling... reason: file './ram.v' is newer than expected.
-	expected: Sat Jan 13 17:57:04 2018
-	actual:   Sat Jan 13 23:49:39 2018
+Recompiling... reason: file './sqg.v' is newer than expected.
+	expected: Sun Jan 14 12:32:01 2018
+	actual:   Sun Jan 14 12:41:33 2018
 file: top_module.v
-	module worklib.ram:v
+	module worklib.sqg:v
 		errors: 0, warnings: 0
 		Caching library 'worklib' ....... Done
 	Elaborating the design hierarchy:
-	Building instance overlay tables: ....................
-    initial $readmemb (`MATA0, ram0);
-                                  |
-ncelab: *W,MEMODR (./ram.v,22|34): $readmem default memory order incompatible with IEEE1364.
- Done
+	Building instance overlay tables: .................... Done
 	Generating native compiled code:
-		worklib.ram:v <0x19d9c9c4>
-			streams:   5, words:  1760
+		worklib.sqg:v <0x6ece4565>
+			streams:   6, words:  5131
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -43,7 +39,7 @@ FSDB Dumper for IUS, Release Verdi_M-2017.03, Linux, 02/13/2017
 *Verdi* : Begin traversing the scope (test_top_module), layer (0).
 *Verdi* : Enable +mda dumping.
 *Verdi* : End of traversing.
-Simulation complete via $finish(1) at time 81350 NS + 0
+Simulation complete via $finish(1) at time 82070 NS + 0
 ./test_top_module.v:70         $finish;
 ncsim> exit
-TOOL:	ncverilog	14.10-s005: Exiting on Jan 13, 2018 at 23:49:51 CST  (total: 00:00:11)
+TOOL:	ncverilog	14.10-s005: Exiting on Jan 14, 2018 at 12:41:34 CST  (total: 00:00:01)

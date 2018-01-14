@@ -15,7 +15,7 @@ module sqg #(parameter BOX_IDX = 3,
 
 
     reg [DATA_LEN-1:0] x_r;
-    reg [2*BOX_IDX-1:0] counter_r, counter_w;
+    reg [2*BOX_IDX:0] counter_r, counter_w;
     reg [BOX_IDX-1:0] count_rd_x, count_rd_y;
     reg [BOX_IDX-1:0] count_rd_x_r, count_rd_y_r;
     reg [BOX_IDX-1:0] count_wr_x, count_wr_y;
@@ -31,6 +31,7 @@ module sqg #(parameter BOX_IDX = 3,
         BC_rd_addr[2*BOX_IDX:BOX_IDX+1] = count_rd_x_r;
         BC_rd_addr[BOX_IDX] = 0;
         BC_rd_addr[BOX_IDX-1:0] = count_rd_y_r;
+	if (counter_r[BOX_IDX] == 1) BC_rd_addr[BOX_IDX] = 1;
 
         BC_wr_addr[2*BOX_IDX:BOX_IDX+1] = count_wr_x_r;
         BC_wr_addr[BOX_IDX] = 1;
@@ -51,10 +52,13 @@ module sqg #(parameter BOX_IDX = 3,
                 count_rd_y = count_rd_y_r;
                 if (counter_r != 0) begin
 		    wen_sqg = 1;
-             //       if (counter_r[BOX_IDX:0] == 0) begin
-               //         count_rd_x = count_rd_x_r + 1 - (1<<BOX_IDX);
-                 //       count_rd_y = count_rd_y_r + 1;
-                   // end
+		// 2nd loop
+		    if (counter_r[2*BOX_IDX] == 1) begin
+			count_rd_x[BOX_IDX-1] = 0;
+			count_rd_y[BOX_IDX-1] = 1;
+			count_wr_x[BOX_IDX-2] = 0;
+			count_wr_y[BOX_IDX-1] = 1;
+		    end
 		end
             end
             else if (counter_r[1:0] == 1) begin
@@ -75,6 +79,13 @@ module sqg #(parameter BOX_IDX = 3,
 		    count_rd_y = count_rd_y_r - 1;
 		end
 	    end
+	 // 2nd loop
+	//    if (counter_r[2*BOX_IDX] == 1 & counter_r != -1) begin
+	//	count_rd_x[BOX_IDX-1] = 0;
+	//	count_rd_y[BOX_IDX-1] = 1;
+	//	count_wr_x[BOX_IDX-1] = 0;
+	//	count_wr_y[BOX_IDX-1] = 1;
+	//    end
         end
     end
 
