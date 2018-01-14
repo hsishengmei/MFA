@@ -41,53 +41,93 @@ module sqg #(parameter BOX_IDX = 3,
         count_wr_y[BOX_IDX-2:0] = counter_r[2*BOX_IDX-1:BOX_IDX+1];
         count_wr_x[BOX_IDX-1] = 0;
         count_wr_y[BOX_IDX-1] = 0;
-        if (counter_r[2*BOX_IDX] == 1) begin
-	    
-
-	end
-	// mask_rd_x = 3'b011;
-        // mask_rd_y = 3'b011;
-        // mask_wr_x = 3'b011;
-        // mask_wr_y = 3'b011;
 
 
         if (RST | BC_mode) begin
             counter_w = 0;
             count_rd_x = -1;
             count_rd_y = 0;
-        y = 0;
+            y = 0;
         end
-        else begin            
-    //        if (counter_r[2*BOX_IDX] == 1) begin
-      //           count_rd_x[BOX_IDX-1] = 0;
-        //         count_rd_y[BOX_IDX-1] = 1;
-          //       count_wr_x[BOX_IDX-1] = 0;
-            //     count_wr_y[BOX_IDX-1] = 1;
-            //end
-            if (counter_r[1:0] == 0) begin
-                count_rd_x = count_rd_x_r + 1;
-                count_rd_y = count_rd_y_r;
-                if (counter_r != 0) begin
-                    wen_sqg = 1;
+        else begin       
+            if (counter_r[2*BOX_IDX] == 0) begin // 1st loop
+                if (counter_r[1:0] == 0) begin
+                    count_rd_x = count_rd_x_r + 1;
+                    count_rd_y = count_rd_y_r;
+                    if (counter_r != 0) begin
+                        wen_sqg = 1;
+                    end
                 end
-            end
-            else if (counter_r[1:0] == 1) begin
-            y = x;
-                count_rd_x = count_rd_x_r - 1;
-                count_rd_y = count_rd_y_r + 1;
-            end
-            else if (counter_r[1:0] == 2) begin
-                count_rd_x = count_rd_x_r + 1;
-                count_rd_y = count_rd_y_r;
-            end
-            else begin
-                count_rd_x = count_rd_x_r + 1;
-                if (count_rd_x_r == 2**BOX_IDX-1) begin
+                else if (counter_r[1:0] == 1) begin
+                y = x;
+                    count_rd_x = count_rd_x_r - 1;
                     count_rd_y = count_rd_y_r + 1;
                 end
+                else if (counter_r[1:0] == 2) begin
+                    count_rd_x = count_rd_x_r + 1;
+                    count_rd_y = count_rd_y_r;
+                end
                 else begin
-                    count_rd_y = count_rd_y_r - 1;
-                end                
+                    count_rd_x = count_rd_x_r + 1;
+                    if (count_rd_x_r == 2**BOX_IDX-1) begin
+                        count_rd_y = count_rd_y_r + 1;
+                    end
+                    else begin
+                        count_rd_y = count_rd_y_r - 1;
+                    end                
+                end
+            end
+            else begin // 2nd loop
+                if (counter_r[2*(BOX_IDX-1)] == 0) begin  
+                    if (counter_r[1:0] == 0) begin
+                        count_rd_x = count_rd_x_r + 1;
+                        count_rd_y = count_rd_y_r;
+                        if (counter_r != 0) begin
+                            wen_sqg = 1;
+                        end
+                    end
+                    else if (counter_r[1:0] == 1) begin
+                    y = x;
+                        count_rd_x = count_rd_x_r - 1;
+                        count_rd_y = count_rd_y_r + 1;
+                    end
+                    else if (counter_r[1:0] == 2) begin
+                        count_rd_x = count_rd_x_r + 1;
+                        count_rd_y = count_rd_y_r;
+                    end
+                    else begin
+                        if (count_rd_x_r == 2**(BOX_IDX-1)-1) count_rd_x = 0;
+                        else count_rd_x = count_rd_x_r + 1;
+
+                        if (count_rd_x_r == 2**(BOX_IDX-1)-1) count_rd_y = count_rd_y_r + 1;
+                        else count_rd_y = count_rd_y_r - 1;
+                    end
+                end
+                else begin // 3rd loop
+                    if (counter_r[1:0] == 0) begin
+                        count_rd_x = count_rd_x_r + 1;
+                        count_rd_y = count_rd_y_r;
+                        if (counter_r != 0) begin
+                            wen_sqg = 1;
+                        end
+                    end
+                    else if (counter_r[1:0] == 1) begin
+                    y = x;
+                        count_rd_x = count_rd_x_r - 1;
+                        count_rd_y = count_rd_y_r + 1;
+                    end
+                    else if (counter_r[1:0] == 2) begin
+                        count_rd_x = count_rd_x_r + 1;
+                        count_rd_y = count_rd_y_r;
+                    end
+                    else begin
+                        if (count_rd_x_r == 2**(BOX_IDX-2)-1) count_rd_x = 0;
+                        else count_rd_x = count_rd_x_r + 1;
+
+                        if (count_rd_x_r == 2**(BOX_IDX-2)-1) count_rd_y = count_rd_y_r + 1;
+                        else count_rd_y = count_rd_y_r - 1;
+                    end
+                end
             end
         end
     end
