@@ -65,7 +65,7 @@ module test_top_module ();
         BC_mode = 1;
         repeat(4002) @(posedge CLK);
         BC_mode = 0;
-        repeat(100) @(posedge CLK);
+        repeat(86) @(posedge CLK);
     
         $finish;
     end
